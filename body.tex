@@ -1,1 +1,106 @@
-We will treat topological solutions to the model described by the Lagrangian $\Lagr$\dots
+\section{Dirac Monopoles}
+The covariant writing of Maxwell equations is represented by the tensor $F^{\mu \nu}$ which satisfies
+
+\begin{equation}\label{Maxwell}
+\partial_{\mu}F^{\mu \nu}=0,
+\end{equation}
+which is explicitelly
+(INSERIRE MATRICE COI CAMPI E, B)
+We thus define 
+$\tilde{F}^{\mu\nu}=*F^{\mu\nu}=-\frac{1}{2}\varepsilon^{\mu \nu \rho \sigma}F_{\rho \sigma}$,
+such that $dF=0$.
+In this case a particular solution of Maxwell equations, i.e. an electromagnetic field which satisfies \eqref{Maxwell} is the electric monopole:
+
+\begin{equation}\label{ElectricMonopole}
+\vec E=\frac{e}{2r^2}\hat{r},
+\end{equation}
+such that
+
+\begin{align}
+\vec \nabla \vec E=2\pi e \delta^3(\vec r),\\
+e=\frac{1}{2\pi}\int_{S^2}\vec E \cdot d\vec S.
+\end{align}
+Now we consider formally another solution, which is similar to \eqref{ElectricMonopole}:
+
+\begin{equation}\label{MagneticMonopole}
+\vec B=\frac{m}{2r^2}\hat{r},
+\end{equation}
+and since
+
+\begin{equation}
+F_{ij}=\frac{m}{2r^3}\varepsilon_{ijk}x^k,
+\end{equation}
+we can find
+
+\begin{equation}
+F=F_{ij}dx^idx^j=\frac{m}{4r^3}\varepsilon_{ijk}x^kdx^idx^j=\frac{m}{2}\sin\theta d\theta\times d\phi,
+\end{equation}
+and
+
+\begin{equation}
+dF=\frac{m}{2}\int_{S^2}\sin\theta d\theta\times d\phi=2\pi m.
+\end{equation}
+We can not obtain for this solution that exists a global vector potential A such that $F=dA$: if it existed, we should have
+
+\begin{equation}
+0\neq m=\int_{S^2}\frac{dA}{2\pi}=\int_{\partial S^2}\frac{A}{2\pi}=0,
+\end{equation}
+which implies that we must define at least two charts for our mainfold.
+Since $dF=0$ on simply connected mainfolds, F is a closed form and, from Poincarré theorem, we know it is always exact. The second omothopy group for euclidean space is:
+
+\begin{equation}
+\Pi_2\left(\mathcal{R}-\bigl\{0\bigr\}\right)=\mathcal{Z}.
+\end{equation}
+A possible choice of $A$ is, in cilindric cohordinates,
+
+\begin{equation}
+A=\frac{m}{2}\left(c-\cos\theta\right)d\phi,
+\end{equation}
+and
+
+\begin{equation}
+dA=\frac{m}{2}\left(c-\cos\theta\right)d^2\theta-\frac{m}{2}d\cos\theta\times d \phi=\frac{m}{2}\sin\theta d\theta\times d \phi,
+\end{equation}
+which implies that in the space there are two possible choiches of $c$ which can produce singularities:
+
+\begin{itemize}
+\item For $c=1$ A has singularities along z<0 axis (this is called Dirac string).
+\item For $c=-1$ in fact A has singular values for z>0 axis.
+\end{itemize}
+We know from Stokes theorem that, for magnetic monopoles of eq. \eqref{MagneticMonopole}, taking a ball around the monopole itself,
+
+\begin{equation}\label{MagCharge}
+2\pi m=\int_{S_2} F=\lim\int_{S_2-D_{\varepsilon}}F=\lim\int dA=\lim\int_{C_{\varepsilon}} A,
+\end{equation}
+that implies $A\to\infty$. Indeed
+
+\begin{equation}
+A^+-A^-=md\phi=d(m\phi),
+\end{equation}
+and for this reason we can see how $A$ behave under a transformation of unitary group $U(1)$. Let $U_+$ be the group where we defined $A_+$ and $U_-$ the one for $A_-$.
+Let $h$ be the transformation $h:U_+\cap U_- \to G=U(1)$, such that $x^i\to e^{ig\lambda(x)}$. In this case
+
+\begin{equation}
+A^+=A^-+d\lambda=h^{-1}A^-h-\frac{i}{g}h dh,
+\end{equation}
+which implies $mg\in \mathcal{Z}$. Again from \eqref{MagCharge} we have
+
+\begin{equation}
+m=\int_{S^2}\frac{F}{2\pi}=\int_{S^2_+}\frac{dA^+}{2\pi}+\int_{S^2_-}\frac{dA^-}{2\pi}=\int_{S^1}\frac{A^+-A^-}{2\pi}=\int_{S^1}\frac{d\lambda}{2\pi}=\frac{\Delta\lambda}{2\pi},
+\end{equation}
+and the winding number is:
+
+\begin{equation}
+S_1=\frac{g\Delta\lambda}{2\pi}=mg.
+\end{equation}
+Now we consider the minimal coupling
+\begin{equation}
+S=S_0+\frac{e}{c}\int_{\gamma}A_{\mu}\frac{dx^{\mu}}{d\tau}d\tau,
+\end{equation}
+which implies a rewriting of 4-momentum $p^{\mu}=\left(\frac{H}{c},\vec p\right)=p_0^{\mu}+\frac{e}{c}A^{\mu}$.
+In this case we have, for a Gauge transformation of potential $A'_{\mu}=A_{\mu}+\partial_{\mu}\lambda$,
+\begin{equation}
+\ket{\psi'}=e^{\frac{ie\lambda}{\hbar c}}\ket{\psi},
+\end{equation}
+and for $\lambda=m\phi$ we obtain $em\in \mathcal{Z}$
+\section{’t Hooft-Polyakov Monopoles}
