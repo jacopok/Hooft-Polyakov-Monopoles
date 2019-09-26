@@ -1,12 +1,25 @@
-\section{Dirac Monopoles}
-The covariant writing of Maxwell equations is represented by the tensor $F^{\mu \nu}$ which satisfies
+\documentclass[main.tex]{subfiles}
+\begin{document}
 
-\begin{equation}\label{Maxwell}
-\partial_{\mu}F^{\mu \nu}=0,
+
+\section{Dirac Monopoles}
+The covariant form of Maxwell's equations is represented with respect to  the electromagnetic tensor $F^{\mu \nu}$
+%
+\begin{equation}
+  F^{\mu\nu} = \begin{bmatrix}
+  0   & E_1  & E_2  & E_3 \\
+  -E_1   & 0  & B_3  & -B_2 \\
+  -E_2   & -B_3  & 0  & B_1 \\
+  -E_3   & B_2  & -B_1  & 0
+  \end{bmatrix}\,,
 \end{equation}
-which is explicitelly
-(INSERIRE MATRICE COI CAMPI E, B)
-We thus define 
+%
+and reads
+\begin{equation}\label{Maxwell}
+\partial_{\mu}F^{\mu \nu}=0\,.
+\end{equation}
+
+We thus define
 $\tilde{F}^{\mu\nu}=*F^{\mu\nu}=-\frac{1}{2}\varepsilon^{\mu \nu \rho \sigma}F_{\rho \sigma}$,
 such that $dF=0$.
 In this case a particular solution of Maxwell equations, i.e. an electromagnetic field which satisfies \eqref{Maxwell} is the electric monopole:
@@ -104,3 +117,5 @@ In this case we have, for a Gauge transformation of potential $A'_{\mu}=A_{\mu}+
 \end{equation}
 and for $\lambda=m\phi$ we obtain $em\in \mathcal{Z}$
 \section{’t Hooft-Polyakov Monopoles}
+
+\end{document}
