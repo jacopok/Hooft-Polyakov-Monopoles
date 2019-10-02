@@ -1,26 +1,33 @@
+\documentclass[main.tex]{subfiles}
+\begin{document}
+
+
 \section{’t Hooft-Polyakov Monopoles}
-It will be showed that free magnetic monopoles in the physical vacuum are possible as regular solutions of the field equations of the Georgi-Glashow model, following the notorious works of Gerard 't Hoft \cite{Hof:Mon} and Aleksander Polyakov \cite{Pol:Mon} in 1974. 
+%
+It will be shown that free magnetic monopoles in the physical vacuum are possible as regular solutions of the field equations of the Georgi-Glashow model, following the notorious works of Gerard 't Hoft \cite{Hof:Mon} and Aleksander Polyakov \cite{Pol:Mon} in 1974.
+
 \subsection{An Intuitive Example}
+%
 A simple and very clarifing example, which gives an intuitve idea of how it is possible to have monopoles in quantum fied theory, is given in the introduction of \cite{Hof:Mon}. \\
-We should consider a two-dimensional spherical surface $S_2$ in the usual 3D space, with some magnetic flux $\Phi$ enetering in a spot. If the spot is surrounded by a contour $C_0$, the potential around $C_0$ suld be equal to: 
+We should consider a two-dimensional spherical surface $S_2$ in the usual 3D space, with some magnetic flux $\Phi$ enetering in a spot. If the spot is surrounded by a contour $C_0$, the potential around $C_0$ suld be equal to:
 \begin{equation}
-    \Vec{A}= \nabla \Lambda 
+    \Vec{A}= \nabla \Lambda
 \end{equation}
-where $\Lambda$ is a gauge transformation, which acts on the wavefunction in this way: $\psi \rightarrow e^{i\Lambda} \psi $. 
-While $\Lambda$ is a multivalued function, $\Phi$, being a physical field, is required to be a single-valued function. Since, 
+where $\Lambda$ is a gauge transformation, which acts on the wavefunction in this way: $\psi \rightarrow e^{i\Lambda} \psi $.
+While $\Lambda$ is a multivalued function, $\Phi$, being a physical field, is required to be a single-valued function. Since,
 \begin{equation}
     \Phi = \int_{C_0} \nabla \Lambda \cdot d\Vec{l}
-\end{equation}, 
-$\Psi$ should be equal to an integer multiplied for $2 \pi  $, a complete gauge rotation along the contour. 
-In an Abelian Gauge theory, there must be another spot from which the flux comes out, because the $2k \pi$ rotation cannot be changed into a constant. \\ 
+\end{equation},
+$\Psi$ should be equal to an integer multiplied for $2 \pi  $, a complete gauge rotation along the contour.
+In an Abelian Gauge theory, there must be another spot from which the flux comes out, because the $2k \pi$ rotation cannot be changed into a constant. \\
 Instead, in a non Abelian gauge theory, with a compact covering group, such as O(3) , a rotation over $4\pi$ can be shifted into a constant without singularity.
 It yelds that if we have a non Abelian gauge theory with a compact covering group and such compact covering group has the the electromagnetic group  U(1) as a subgroup, the existance of the magnetic monopole would be allowed without supposing the existance of any singularity anywhere on the sphere.
 A theory that satisifies those requirements is the Georgi-Glashow model for the electroweak interaction.
 
 \subsection{The bosonic part of the Georgi-Glashow Model}
 The Georgi-Glashow model was proposed as a theory for the electroweak interaction and, in its bosonic part, is based on the gauge group SU(2) which is isomorphic to SO(3).
-The lagrangian density $\mathcal{L}$, whose associated action is invariant under gauge transformation belonging to SO(3), contains the Higgs field $\phi = ( \phi^1, \phi^2 , \phi^3)$, which has values in SO(3) and three gauge potentials $\Vec{W}^\mu$,which take values in the Lie algebra of SO(3). 
-$\mathcal{L}$ has the following form : 
+The lagrangian density $\mathcal{L}$, whose associated action is invariant under gauge transformation belonging to SO(3), contains the Higgs field $\phi = ( \phi^1, \phi^2 , \phi^3)$, which has values in SO(3) and three gauge potentials $\Vec{W}^\mu$,which take values in the Lie algebra of SO(3).
+$\mathcal{L}$ has the following form :
 \begin{equation}
 \mathcal{L}= \frac{1}{2}D_{\mu}\phi^a D^\mu \phi^a  -\frac{1}{4} G_{\mu \nu}^a G^{a \ \mu \nu} - \underbrace{\frac{1}{4}\lambda (\phi^2 -a^2)}_{V(\phi)},
 \end{equation}
@@ -28,7 +35,7 @@ where $\Vec{G_{\mu \nu}}$ is the gauge field-strength and is defined as follows:
 \begin{equation}
 \Vec{G_{\mu \nu}} = \partial_{\mu}  \Vec{W}^\nu -\partial_{\nu}  \Vec{W}^\mu - e \Vec{W}^\nu \times \Vec{W}^\mu,
 \end{equation}
-and the operator $D_{\mu}$ is the gauge covariant derivative: 
+and the operator $D_{\mu}$ is the gauge covariant derivative:
 \begin{equation}
 D_\mu \Vec{\phi} = \partial_\mu \Vec{\phi} - e \Vec{W}_\mu \times \Vec{\phi}.
 \end{equation}
@@ -43,7 +50,7 @@ Now we are interested at the spectrum of the model, which is composed of four bo
 
 The boson masses can be obtained through perturbation theory, considering an Higgs potential with little fluctuation around the minimum;
 \begin{equation}
-\vec{\phi} = \vec{a}+ \vec{\chi}. 
+\vec{\phi} = \vec{a}+ \vec{\chi}.
 \end{equation}
 For the sake of simpicity, we chose as a minimum, the vector $\vec{a}= (0,0,a)$. Then, working in the so-called unitary gauge, the fluctuation vector $\vec{\chi}$ can be written in such a way that $\vec{\chi} = (0,0,\chi) $.
 At this point, we should expand the Higgs field around $\vec{a}$ in order to read the masses of the bosons from the quadratic term coefficients:
@@ -52,24 +59,24 @@ V(\phi)\simeq  \frac{1}{2}  \left(\sqrt{2 \lambda} a\right)^2 \vec{\chi}^2 = \le
  \frac{1}{2}D_{\mu}\vec{\phi} \cdot  D^\mu \vec{\phi} \simeq  \frac{1}{2}D_{\mu}\vec{a} \cdot  D^\mu \vec{a}  + \frac{1}{2} \left( ea \right)^2 =\frac{1}{2}D_{\mu}\vec{a} \cdot  D^\mu \vec{a}  + \frac{1}{2} \left( \frac{M_W}{\hbar} \right)^2
 \end{gather}
 
-To deduce the charges of the bosons, instead, we should see how the covariant derivative, which describese the minimal coupling for the photon $A_{\mu}$: 
+To deduce the charges of the bosons, instead, we should see how the covariant derivative, which describese the minimal coupling for the photon $A_{\mu}$:
 \begin{equation}
 \nabla_\mu = \partial_\mu + i \frac{Q}{\hbar} A_{\mu}
 \end{equation}
-is embedded in the SO(3) covariant derivative. Then, the value given to $Q$ for each boson, represents the charge of the bosons. 
+is embedded in the SO(3) covariant derivative. Then, the value given to $Q$ for each boson, represents the charge of the bosons.
 
 Another aspect of the Georgi-Glashow model, which is relevant for understanding the 't Hooft-Polyakov monopoles, is the study of the vacuum configurations.\\
-Using Noether theorem, the stress energy tensor can be calculated. To be more specific, we are interested at its component $T^{00}$, which describes the energy density: 
+Using Noether theorem, the stress energy tensor can be calculated. To be more specific, we are interested at its component $T^{00}$, which describes the energy density:
 \begin{equation}
 T^{00} = \frac{1}{2} \Vec{E}^i \cdot  \Vec{E}^i + \frac{1}{2} \Vec{B}^i \cdot \Vec{B}^i +\frac{1}{2} D_0 \Vec{\phi} \cdot D_0 \Vec{\phi} +\frac{1}{2} D_i \Vec{\phi} \cdot  D_i \Vec{\phi} + V(\phi),
 \label{eq:Den}
 \end{equation}
 where $\Vec{E}^i = - \Vec{G}^{0i}$ and $D_0 \Vec{\phi}$ are the conjugate momenta to the gauge field $\Vec{W}_{\mu}$ and $\Vec{B}^i$ is defined through this relation: $ \Vec{G}_{ij} = \epsilon_{ijk} \Vec{B}_k$.\\
-Imposing that the energy density $T_{00}$ contained in expression \ref{eq:Den}, is null, we get the conditions for the vacuum configurations: 
+Imposing that the energy density $T_{00}$ contained in expression \ref{eq:Den}, is null, we get the conditions for the vacuum configurations:
 \begin{equation}
 \Vec{G}_{\mu \nu} = 0 \qquad D^{\mu} \Vec{\phi}  = 0 \qquad V(\phi)=0
 \end{equation}
-The last two of those conditions give the so-called \textit{Higgs Vacuum} configurations. 
+The last two of those conditions give the so-called \textit{Higgs Vacuum} configurations.
 In the Higgs vacuum, the Higgs field is such that $\phi^2 = a^2$. It follows that such vacuum configurations are not invaiant under the whole SO(3) but under the subgroup SO(2)$\simeq$ U(1), which is the gauge group of electromagnetism. Hence, the Georgi-Glashow model undergoes a spontaneous symmetry breaking process.
 
 
@@ -79,3 +86,5 @@ In the Higgs vacuum, the Higgs field is such that $\phi^2 = a^2$. It follows tha
 \subsection{The 't Hooft-Polyakov Ansatz}
 \subsection{Topological Origin of Magnetic Charge}
 \subsection{Relation with Dirac Monopole}
+
+\end{document}
