@@ -22,7 +22,7 @@ The Georgi-Glashow model was proposed as a theory for the electroweak interactio
 The lagrangian density $\mathcal{L}$, whose associated action is invariant under gauge transformation belonging to SO(3), contains the Higgs field $\phi = ( \phi^1, \phi^2 , \phi^3)$, which has values in SO(3) and three gauge potentials $\Vec{W}^\mu$,which take values in the Lie algebra of SO(3). 
 $\mathcal{L}$ has the following form : 
 \begin{equation}
-\mathcal{L}= \frac{1}{2}D_{\mu}\phi^a D^\mu \phi^a  -\frac{1}{4} G_{\mu \nu}^a G^{a \ \mu \nu} - \underbrace{\frac{1}{4}\lamba (\phi^2 -a^2)}_{V(\phi)},
+\mathcal{L}= \frac{1}{2}D_{\mu}\phi^a D^\mu \phi^a  -\frac{1}{4} G_{\mu \nu}^a G^{a \ \mu \nu} - \underbrace{\frac{1}{4}\lambda (\phi^2 -a^2)}_{V(\phi)},
 \end{equation}
 where $\Vec{G_{\mu \nu}}$ is the gauge field-strength and is defined as follows:
 \begin{equation}
@@ -38,15 +38,15 @@ Let us look at the physical meaning of each term in the lagrangian density:
     \item The term  $-\frac{1}{4} G_{\mu \nu}^a G^{a \ \mu \nu}$ descirbes the dynamics of the potential $\Vec{W}_{\mu}$;
     \item The term  $V(\phi) $ describes the self interaction of the Higgs field and contains a non negative constant $\lambda$.
 \end{itemize}
-\\
+
 Now we are interested at the spectrum of the model, which is composed of four bosons,as shown in the following table:
 
 The boson masses can be obtained through perturbation theory, considering an Higgs potential with little fluctuation around the minimum;
 \begin{equation}
 \vec{\phi} = \vec{a}+ \vec{\chi}. 
 \end{equation}
-For the sake of simpicity, we chose as a minimum, the vector $\vec{\a}= (0,0,a)$. Then, working in the so-called unitary gauge, the fluctuation vector $\vec{\chi}$ can be written in such a way that $\vec{\chi} = (0,0,\chi) $.
-At this point, we should expand the Higgs field around $\vec{\a}$ in order to read the masses of the bosons from the quadratic term coefficients:
+For the sake of simpicity, we chose as a minimum, the vector $\vec{a}= (0,0,a)$. Then, working in the so-called unitary gauge, the fluctuation vector $\vec{\chi}$ can be written in such a way that $\vec{\chi} = (0,0,\chi) $.
+At this point, we should expand the Higgs field around $\vec{a}$ in order to read the masses of the bosons from the quadratic term coefficients:
 \begin{gather}
 V(\phi)\simeq  \frac{1}{2}  \left(\sqrt{2 \lambda} a\right)^2 \vec{\chi}^2 = \left( \frac{M_\chi}{\hbar }\right)^2 \vec{\chi}^2 \\
  \frac{1}{2}D_{\mu}\vec{\phi} \cdot  D^\mu \vec{\phi} \simeq  \frac{1}{2}D_{\mu}\vec{a} \cdot  D^\mu \vec{a}  + \frac{1}{2} \left( ea \right)^2 =\frac{1}{2}D_{\mu}\vec{a} \cdot  D^\mu \vec{a}  + \frac{1}{2} \left( \frac{M_W}{\hbar} \right)^2
@@ -61,7 +61,7 @@ is embedded in the SO(3) covariant derivative. Then, the value given to $Q$ for 
 Another aspect of the Georgi-Glashow model, which is relevant for understanding the 't Hooft-Polyakov monopoles, is the study of the vacuum configurations.\\
 Using Noether theorem, the stress energy tensor can be calculated. To be more specific, we are interested at its component $T^{00}$, which describes the energy density: 
 \begin{equation}
-T^{00} = \frac{1}{2} \Vec{E}^i \cdot  \Vec{E}^i + \frac{1}{2} \Vec{B}^i \cdot \Vec{B}^i +\frac{1}{2} D_0 \Vec{\phi} \codt D_0 \Vec{\phi} +\frac{1}{2} D_i \Vec{\phi} \cdot  D_i \Vec{\phi} + V(\phi),
+T^{00} = \frac{1}{2} \Vec{E}^i \cdot  \Vec{E}^i + \frac{1}{2} \Vec{B}^i \cdot \Vec{B}^i +\frac{1}{2} D_0 \Vec{\phi} \cdot D_0 \Vec{\phi} +\frac{1}{2} D_i \Vec{\phi} \cdot  D_i \Vec{\phi} + V(\phi),
 \label{eq:Den}
 \end{equation}
 where $\Vec{E}^i = - \Vec{G}^{0i}$ and $D_0 \Vec{\phi}$ are the conjugate momenta to the gauge field $\Vec{W}_{\mu}$ and $\Vec{B}^i$ is defined through this relation: $ \Vec{G}_{ij} = \epsilon_{ijk} \Vec{B}_k$.\\
