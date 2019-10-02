@@ -22,7 +22,7 @@ The Georgi-Glashow model was proposed as a theory for the electroweak interactio
 The lagrangian density $\mathcal{L}$, whose associated action is invariant under gauge transformation belonging to SO(3), contains the Higgs field $\phi = ( \phi^1, \phi^2 , \phi^3)$, which has values in SO(3) and three gauge potentials $\Vec{W}^\mu$,which take values in the Lie algebra of SO(3). 
 $\mathcal{L}$ has the following form : 
 \begin{equation}
-\mathcal{L}= \frac{1}{2}D_{\mu}\phi^a D^\mu \phi^a  -\frac{1}{4} G_{\mu \nu}^a G^{a \ \mu \nu} - \underbrace{\frac{1}{4}\lambda (\phi^2 -a^2)}_{V(\phi)},
+\mathcal{L}= \frac{1}{2}D_{\mu}\phi^a D^\mu \phi^a  -\frac{1}{4} G_{\mu \nu}^a G^{a \ \mu \nu} - \underbrace{\frac{1}{4}\lamba (\phi^2 -a^2)}_{V(\phi)},
 \end{equation}
 where $\Vec{G_{\mu \nu}}$ is the gauge field-strength and is defined as follows:
 \begin{equation}
@@ -38,14 +38,29 @@ Let us look at the physical meaning of each term in the lagrangian density:
     \item The term  $-\frac{1}{4} G_{\mu \nu}^a G^{a \ \mu \nu}$ descirbes the dynamics of the potential $\Vec{W}_{\mu}$;
     \item The term  $V(\phi) $ describes the self interaction of the Higgs field and contains a non negative constant $\lambda$.
 \end{itemize}
-
-Now we are interested at the spectrum of the model, which is composed of four bosons,as shown in the following table:
-
-The boson masses can be obtained through perturbation theory, considering an Higgs potential with little fluctuation around the minimum;
+\\
+\paragraph{Spectrum of the Model}
+Now we are interested at the spectrum of the model. It can be obtained through perturbation theory, considering an Higgs potential with little fluctuation around the minimum $\vec{a}$:
 \begin{equation}
 \vec{\phi} = \vec{a}+ \vec{\chi}. 
-\end{equation}
-For the sake of simpicity, we chose as a minimum, the vector $\vec{a}= (0,0,a)$. Then, working in the so-called unitary gauge, the fluctuation vector $\vec{\chi}$ can be written in such a way that $\vec{\chi} = (0,0,\chi) $.
+\end{equation} 
+Four bosons figure in our model: the photon $A_{\mu} = \frac{1}{a} \vec{a}\cdot \vec{W}_\mu $, the Higgs Boson, associated to the field $\phi$ and the bosons $\vec{W}_\mu^\pm$. Their properties are shown in tabel \label{tab:Bosons}.
+\begin{table}[H]
+\centering
+\begin{tabular}{cc|cc}
+\toprule
+ Field  &   Definition   &  Mass  &  Charge \\
+ \midrule
+ $A_{\mu}$ &          Photon                   &  0                             &     0 \\
+ $\phi $   &          Higgs Boson              &  $a \sqrt{2 \lambda} \hbar $   &     0 \\
+$ W_{\mu}^{\pm}& $    Weak Interaction Bosons? &  $ae\hbar$                     &    $ \pm e \hbar$ \\
+ \bottomrule
+\end{tabular}
+\label{tab:Bosons}
+\end{table}
+
+
+For the sake of simplicity, we chose as a minimum, the vector $\vec{\a}= (0,0,a)$. Then, working in the so-called unitary gauge, the fluctuation vector $\vec{\chi}$ can be written in such a way that $\vec{\chi} = (0,0,\chi) $.
 At this point, we should expand the Higgs field around $\vec{a}$ in order to read the masses of the bosons from the quadratic term coefficients:
 \begin{gather}
 V(\phi)\simeq  \frac{1}{2}  \left(\sqrt{2 \lambda} a\right)^2 \vec{\chi}^2 = \left( \frac{M_\chi}{\hbar }\right)^2 \vec{\chi}^2 \\
@@ -58,10 +73,10 @@ To deduce the charges of the bosons, instead, we should see how the covariant de
 \end{equation}
 is embedded in the SO(3) covariant derivative. Then, the value given to $Q$ for each boson, represents the charge of the bosons. 
 
-Another aspect of the Georgi-Glashow model, which is relevant for understanding the 't Hooft-Polyakov monopoles, is the study of the vacuum configurations.\\
+\paragraph{Vacuum Configurations}Another aspect of the Georgi-Glashow model, which is relevant for understanding the 't Hooft-Polyakov monopoles, is the study of the vacuum configurations.\\
 Using Noether theorem, the stress energy tensor can be calculated. To be more specific, we are interested at its component $T^{00}$, which describes the energy density: 
 \begin{equation}
-T^{00} = \frac{1}{2} \Vec{E}^i \cdot  \Vec{E}^i + \frac{1}{2} \Vec{B}^i \cdot \Vec{B}^i +\frac{1}{2} D_0 \Vec{\phi} \cdot D_0 \Vec{\phi} +\frac{1}{2} D_i \Vec{\phi} \cdot  D_i \Vec{\phi} + V(\phi),
+T^{00} = \frac{1}{2} \Vec{E}^i \cdot  \Vec{E}^i + \frac{1}{2} \Vec{B}^i \cdot \Vec{B}^i +\frac{1}{2} D_0 \Vec{\phi} \codt D_0 \Vec{\phi} +\frac{1}{2} D_i \Vec{\phi} \cdot  D_i \Vec{\phi} + V(\phi),
 \label{eq:Den}
 \end{equation}
 where $\Vec{E}^i = - \Vec{G}^{0i}$ and $D_0 \Vec{\phi}$ are the conjugate momenta to the gauge field $\Vec{W}_{\mu}$ and $\Vec{B}^i$ is defined through this relation: $ \Vec{G}_{ij} = \epsilon_{ijk} \Vec{B}_k$.\\
@@ -70,12 +85,79 @@ Imposing that the energy density $T_{00}$ contained in expression \ref{eq:Den}, 
 \Vec{G}_{\mu \nu} = 0 \qquad D^{\mu} \Vec{\phi}  = 0 \qquad V(\phi)=0
 \end{equation}
 The last two of those conditions give the so-called \textit{Higgs Vacuum} configurations. 
-In the Higgs vacuum, the Higgs field is such that $\phi^2 = a^2$. It follows that such vacuum configurations are not invaiant under the whole SO(3) but under the subgroup SO(2)$\simeq$ U(1), which is the gauge group of electromagnetism. Hence, the Georgi-Glashow model undergoes a spontaneous symmetry breaking process.
-
-
-
-
+In the Higgs vacuum, the Higgs field is such that $\phi^2 = a^2$. It follows that such vacuum configurations are not invariant under the whole SO(3) but under the subgroup SO(2)$\simeq$ U(1), which is the gauge group of electromagnetism. Hence, the Georgi-Glashow model undergoes a spontaneous symmetry breaking process.
 
 \subsection{The 't Hooft-Polyakov Ansatz}
+ \paragraph{Hypotheses}We are now interested at solutions of the Euler-Lagrange equations of the Georgi-Glashow model, characterised by the following properties: 
+ \begin{enumerate}
+     \item Finite Energy; 
+     \item Stability; 
+     \item Spherical Symmetry;
+     \item Static Nature.
+ \end{enumerate}
+ 
+ In order to satisfy the first condition, we require that the following integral has a finite value: 
+ \begin{equation}
+ E = \int_{\mathbb{R}^3} T_{00} \ d^3x.
+ \end{equation}
+ This is equivalent to require that at spatial infinity the Higgs Field $\vec{\phi}$ approaches the Higgs Vacuum, which is represnted by the set $\mathcal{M}_0 = \{ \vec{\phi}(\vec{r})  \mid  \vec{\phi}^2 = \vec{a}^2 \}$. 
+ Hence, given $\Sigma_{\infty}$ the spherical surface in $\mathbb{R}^3$ with an infinite radiuse, we require the existance of a continuous function, 
+ \begin{equation}
+     \phi_{\infty} \colon \Sigma_{\infty}  \to \mathcal{M}_0 ,
+  \end{equation}
+ such that:
+ \begin{equation}
+     \lim_{|\vec{r}|\to \infty} \vec{\phi}(\vec{r}) = \vec{\phi}_{\infty}(\vec{r}).
+ \end{equation}
+  Those functions belong to the second homotopy group $\Pi_2(\mathbb{R}^3)$ and can be classified according to their \textit{winding number}, which specifies the number of times the map wraps around $\mathcal{M}_0$ and is a topolgical invariant.
+  \medskip
+  
+  The second condition can be read as the request for non-dissipative solutions, that will never evolve in time to a configuration where $\vec{\phi}_{\infty}$ is constant. In mathematical term, we are asking for the \textit{winding number} of the map $\vec{\phi}_{\infty}$ to be different from 0.
+  \medskip
+  
+  The third and fourth conditions are imposed in order to simplify the problem: we will discuss a more general result, obtained without them, in section \ref{sect:top}.
+  By static nature of the solutions, we mean that that the fields have to be time-indipendent and that $\vec{W}^{\mu = 0}= 0$ at any time. The latter is more than a simple gauge-fixing, because we require the time component of the gauge field to be null \textit{at any time}, which equates to saying that the gauge-fixing transformation, which brings me to $ \vec{W}^{\mu = 0}= 0$, has to be time-indipendent. Taking the expression \ref{eq:Den} and imposing the static nature condition, we get that: 
+  \begin{equation}
+      E = \int_{\mathbb{R}^3} T_{00} = - \int_{\mathbb{R}^3} \mathcal{L} = -L
+      \label{eq:En}
+  \end{equation}
+ 
+   \paragraph{Serach for the solutions}The spherical symmetry condition, instead, allows us to claim that there might exist two real functions $H(aer)$ and $K(aer)$ and that our solution to the Euler-Lagrange equations of the Georgi-Glashow model, might have this form: 
+  \begin{align}
+      \vec{\phi}(\vec{r}) &= \frac{\vec{r}}{er^2}H(aer) \\ 
+      W^{\mu =i}_{a} &= - \epsilon_{aij}\frac{r^j}{er^2}(1 - K(aer)) \\
+      W^{\mu=0}_{a}&=0. 
+  \end{align}
+  
+  Plugging such solutions into the Euler-Lagrange equations of the model or equivalently minimising the energy, whose expression can be read in equation \ref{eq:En}, we obtain two differential equation describing the dynamics of $H(\xi = aer)$ and $K(\xi = aer)$: 
+  \begin{align}
+  \xi ^2 \frac{d^2 K}{d \xi^2} &= KH^2 + K(K^2-1) \\
+  \xi ^2 \frac{d^2 H}{d \xi^2} &= 2K^2H + \frac{\lambda}{e^2}H (H^2 -\xi^2),
+  \end{align}
+  
+  In order to find the boundary conditions for the differrential equations above, we should write the energy of the system, as a function of $H(\xi)$ and $K(\xi)$,
+
+  \begin{equation}
+  \begin{split}
+  E = \frac{4 \pi a}{e} \int_{0}^{\infty} \frac{d \xi}{\xi^2}  \left( \xi^2\frac{dH}{d\xi}  &+  \frac{1}{2}\left( \xi \frac{dH}{d\xi} -H \right)^2  +  
+  \frac{1}{2} \left( K^2 - 1 \right)^2 +  \right.\\
+ \left.  & +K^2 H^2 + \frac{\lambda}{4e^2} \left( H^2-\xi^2\right)^2  \right) \bigr)
+  \end{split}
+  \end{equation}
+  
+  and require that such an integral has a finite value. It follows that: 
+  \begin{align}
+ && \xi \to \infty &\colon  \quad \frac{H}{\xi} \to 1 \qquad \ K \to 0 \\
+ && \xi  \to 0      &\colon  \quad H \sim  O(\xi)     \quad K \sim \ 1 + O(\xi) 
+  \end{align}
+ 
+ We should note that the conditons that $H(\xi)$ approaches to spatial infinity linearly in $\xi$ implies that at an infinte distance from the origin, the Higgs field has the folliwing form: 
+ \begin{equation}
+ \vec{\phi}_{\infty}(\vec{\hat{r}}) = \lim_{|\vec{r}| \to \infty } \frac{\vec{r}}{er^2}H(aer) = a \hat{r}.
+ \end{equation}
+ This means that $\vec{\phi}_{\infty}$ hAS A 
+
+
 \subsection{Topological Origin of Magnetic Charge}
+\label{sect:top}
 \subsection{Relation with Dirac Monopole}
