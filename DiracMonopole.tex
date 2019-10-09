@@ -94,7 +94,7 @@ where $c$ is a parameter that can be arbitrary set. Differentiating this equatio
 \end{equation}
 where the first term vanishes because \(\dd^2 = 0\).
 
-We will show that in the space there are two possible choiches of $c$ which can produce singularities:
+We will show that there are two evident choiches of $c$ which can produce singularities:
 
 \begin{itemize}
 \item For $c=1$ the potential \(A\) is singular along the \(z<0\) axis;
@@ -106,9 +106,9 @@ The \(z \lessgtr 0\) ray is called a \emph{Dirac string}.
 Indeed, for every other choice of $c$ between these two values, $A$ presents singularities along a particular string, which is at the corresponding angle $\theta$.
 In all these cases we see that now topology is not trivial, and for this reason Poincarè theorem is no more valid.
 
-Following this reasoning, it holds that we should define the two aforementioned choices for $A$ as, respectivelly, $A^+$ and $A^-$. We say that $U_+$ is the manifold where we defined $A_+$ and $U_-$ the one for $A_-$.
+Following this reasoning, it holds that we should define the two aforementioned choices for $A$ as, respectivelly, $A^+$ and $A^-$. We say that $U_+$ is the chart where we defined $A_+$ and $U_-$ the one for $A_-$.
 
-We know from Stokes theorem that, for magnetic monopoles of eq. \eqref{MagneticMonopole}, taking a ball around the monopole itself,
+We know from Stokes theorem that, for magnetic monopoles of eq.\eqref{MagneticMonopole}, taking a ball around the monopole itself,
 
 \begin{equation}\label{MagCharge}
 2\pi m=\int_{S_2} F=\lim_{\epsilon\to 0}\int_{S_2-D_{\varepsilon}}F=\lim_{\epsilon\to 0}\int \dd{A}=\lim_{\epsilon\to 0}\int_{C_{\varepsilon}} A,
@@ -117,7 +117,7 @@ which implies the divergence of $A$: its integral along an arbitrarily small cir
 Indeed
 
 \begin{equation}
-A^+-A^-=m\dd{\phi}=\dd{(m\phi)} \overset{\text{def}}{=} \dd{\lambda(x)},
+A^+-A^-=m\dd{\phi}=\dd{(m\phi)} \equiv \dd{\lambda(x)},
 \end{equation}
 %
 and for this reason we can see how $A$ behaves under a transformation of unitary group $U(1)$.
@@ -172,4 +172,30 @@ This implies that a particle into the monopular field conservs another quantity 
 J^i=L^i-\frac{egr^i}{4\pi r}.
 \end{equation}
 \subsection{Witten Effect}
+Now we want to generalize quantization that are deduced from a generic gauge transformation about a direction $\vec\phi$. In this case we have that variations of a generic isovector $\vec v$ and vector potential $\vec A_\mu$ are
+\begin{align}
+&\delta\vec v=\frac{\vec\phi\times\vec v}{a}\nonumber\\
+&\delta\vec A_\mu=-\frac{D_\mu\vec\phi}{ea},
+\end{align}
+where we have the normalization constant $a$, the electric charge $e$ and where we defined the covariant derivative
+\begin{equation}
+D_\mu\vec\phi=\partial_\mu\vec\phi-e\vec A_\mu\times\vec\phi.
+\end{equation}
+Considering now the operator $e^{2\pi i N}$, where $N$ is the same operator with Higgs solution that will be defined in the next section. In the vacuum $D_\mu\vec\phi=0$ and at infinity in space we have that this operator is equal to identity. Using the variations defined above, we can obtain the Noether charge of the related transformations, which is for $\delta\vec\phi=0$
+\begin{equation}
+N=-\int_{\mathcal{R}^3}\frac{1}{ae}\frac{\partial\mathcal{L}}{\partial\partial_0\vec A_i}\cdot D_i\phi=\frac{q}{e},
+\end{equation}
+where we used the fact that the conjugated momentum of $\vec A_i$ is $-\vec E_i$.
+Instead, if we add a new term in the action
+\begin{equation}
+\mathcal{L}_\theta=\frac{e^2\theta}{64\pi^2}\epsilon^{\alpha\beta\mu\nu}\vec G_{\alpha\beta}\vec G_{\mu\nu},
+\end{equation}
+where $\vec G^{\alpha\beta}$ are the gauge field-strengths for $A$. In this case we have a modify of $N$ by a factor
+\begin{equation}
+\Delta N=-\frac{e\theta}{16\pi^2a}\int_{\mathcal{R}^3}\epsilon^{0i\alpha\beta}\vec G_{\alpha\beta}D_i\vec\phi=\frac{e\theta g}{8\pi^2},
+\end{equation}
+with the magnetic charge $g$. Rewriting this expression it follows, for $eg=-4\pi$ (the t' Hooft-Polyakov monopole result, which will be obtained later)\begin{equation}
+q=ne+\frac{e\theta}{2\pi},
+\end{equation}
+with $n\in\mathbf{Z}$. This is the generalization to have consistency with quantization condition, a result by Edward Witten \cite{Witten}.
 \end{document}
