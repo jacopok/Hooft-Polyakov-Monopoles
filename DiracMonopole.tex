@@ -94,7 +94,7 @@ where $c$ is a parameter that can be arbitrary set. Differentiating this equatio
 \end{equation}
 where the first term vanishes because \(\dd^2 = 0\).
 
-We see that in the space there are two possible choiches of $c$ which can produce singularities:
+We will show that in the space there are two possible choiches of $c$ which can produce singularities:
 
 \begin{itemize}
 \item For $c=1$ the potential \(A\) is singular along the \(z<0\) axis;
@@ -103,30 +103,35 @@ We see that in the space there are two possible choiches of $c$ which can produc
 
 The \(z \lessgtr 0\) ray is called a \emph{Dirac string}.
 
-Indeed, for every other choice of $c$ between these two values, $A$ presents singularities along a particular string, which is at the corresponding angle $\theta$ with respec. In all these cases we see that now topology is not trivial, and for this reason Poincarè theorem is no more valid.
-
+Indeed, for every other choice of $c$ between these two values, $A$ presents singularities along a particular string, which is at the corresponding angle $\theta$.
+In all these cases we see that now topology is not trivial, and for this reason Poincarè theorem is no more valid.
 
 Following this reasoning, it holds that we should define the two aforementioned choices for $A$ as, respectivelly, $A^+$ and $A^-$. We say that $U_+$ is the manifold where we defined $A_+$ and $U_-$ the one for $A_-$.
 
 We know from Stokes theorem that, for magnetic monopoles of eq. \eqref{MagneticMonopole}, taking a ball around the monopole itself,
 
 \begin{equation}\label{MagCharge}
-2\pi m=\int_{S_2} F=\lim_{\epsilon\to 0}\int_{S_2-D_{\varepsilon}}F=\lim_{\epsilon\to 0}\int dA=\lim_{\epsilon\to 0}\int_{C_{\varepsilon}} A,
+2\pi m=\int_{S_2} F=\lim_{\epsilon\to 0}\int_{S_2-D_{\varepsilon}}F=\lim_{\epsilon\to 0}\int \dd{A}=\lim_{\epsilon\to 0}\int_{C_{\varepsilon}} A,
 \end{equation}
-that implies naturally the divergence of $A$. Indeed
+which implies the divergence of $A$: its integral along an arbitrarily small circle is fixed and finite.
+Indeed
 
 \begin{equation}
-A^+-A^-=md\phi=d(m\phi),
+A^+-A^-=m\dd{\phi}=\dd{(m\phi)} \overset{\text{def}}{=} \dd{\lambda(x)},
 \end{equation}
-and for this reason we can see how $A$ behave under a transformation of unitary group $U(1)$.
-Let $h$ be the transformation $h:U_+\cap U_- \to G=U(1)$, such that $x^i\to e^{ig\lambda(x)}$. In this case
+%
+and for this reason we can see how $A$ behaves under a transformation of unitary group $U(1)$.
+Let $h$ be the transformation $h:U_+\cap U_- \to G=U(1)$, such that $x^i\to e^{ig\lambda(x)}$.
+The transformation of the potential under this is:
+%
 \begin{equation}
-A^+=A^-+d\lambda=h^{-1}A^-h-\frac{i}{g}h dh,
+A^+=A^-+\dd{\lambda}=h^{-1}A^-h-\frac{i}{g}h \dd{h},
 \end{equation}
-which implies $mg\in \mathcal{Z}$. Again from \eqref{MagCharge} we have
+%
+which implies $mg\in \mathbb{Z}$. Again from \eqref{MagCharge} we have
 
 \begin{equation}
-m=\int_{S^2}\frac{F}{2\pi}=\int_{S^2_+}\frac{dA^+}{2\pi}+\int_{S^2_-}\frac{dA^-}{2\pi}=\int_{S^1}\frac{A^+-A^-}{2\pi}=\int_{S^1}\frac{d\lambda}{2\pi}=\frac{\Delta\lambda}{2\pi},
+m=\int_{S^2}\frac{F}{2\pi}=\int_{S^2_+}\frac{\dd{A}^+}{2\pi}+\int_{S^2_-}\frac{\dd{A}^-}{2\pi}=\int_{S^1}\frac{A^+-A^-}{2\pi}=\int_{S^1}\frac{\dd{\lambda}}{2\pi}=\frac{\Delta\lambda}{2\pi},
 \end{equation}
 and the winding number is:
 
@@ -135,21 +140,21 @@ S_1=\frac{g\Delta\lambda}{2\pi}=mg.
 \end{equation}
 \subsection{Zwanziger-Schwinger Quantization for the Dyon}
 
-Now we consider the 1-dimentional Schrodinger equation:
+Now we consider the 1-dimensional Schrödinger equation:
 
 \begin{equation}
     -\frac{\hbar^2}{2m}\nabla^2\psi=i\hbar\frac{\partial\psi}{\partial t}
 \end{equation}
-Where we have $\nabla_i=\partial_i+\frac{ie A_i}{h}$. We want this equation to respect the Gauge transformations, which means that we want it to be valid for any $A'_{\mu}=A_{\mu}+\partial_{\mu}\lambda$. This implies validity for any wavefunction
+Where we have $\nabla_i=\partial_i+\frac{ie A_i}{h}$. We want this equation to be invariant with respect to Gauge transformations, which means that we want it to be valid for any $A'_{\mu}=A_{\mu}+\partial_{\mu}\lambda$. This implies validity for any wavefunction
 \begin{equation}
-\ket{\psi'}=e^{\frac{ie\lambda}{\hbar c}}\ket{\psi},
+\ket{\psi'}=e^{\frac{ie\lambda}{\hbar c}}\ket{\psi}\,.
 \end{equation}
 Now, the minimal coupling for the action of this system is
 \begin{equation}
 S=S_0+\frac{e}{c}\int_{\gamma}A_{\mu}\frac{dx^{\mu}}{d\tau}d\tau.
 \end{equation}
 In this case it follows
-that for $\lambda=m\phi$ we obtain $em\in \mathcal{Z}$, which is Dirac quantisation condition. The Dirac monopole, in classical theory, represents the solution of a limit for a thin and long solenoid that lays along the $z<0$ axis. In quantum mechanics it can be proven (Aharanov-Bohm effect) that, although the field lines are kept into the solenoid, the topological effect of the presence of the solenoid in the space can influence the dynamics of the system, in such a way that in quantum mechanics Dirac monopole cannot be interpreted as the limit of this physical exemple.
+that for $\lambda=m\phi$ we obtain $em\in \mathbb{Z}$, which is Dirac quantisation condition. The Dirac monopole, in classical theory, represents the solution of a limit for a thin and long solenoid that lays along the $z<0$ axis. In quantum mechanics it can be proven (Aharanov-Bohm effect) that, although the field lines are kept into the solenoid, the topological effect of the presence of the solenoid in the space can influence the dynamics of the system, in such a way that in quantum mechanics Dirac monopole cannot be interpreted as the limit of this physical exemple.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.3]{DiracMon.png}
