@@ -75,7 +75,8 @@ We can not find for this solution a global vector potential A such that $F=\dd{A
 \end{equation}
 %
 which implies that we must define at least two charts for our manifold.
-Since $\dd{F}=0$ on simply connected manifolds, $F$ is a closed form: from Poincaré's lemma, we know it is always exact. [Hai appena scritto che non esiste $A$ tc $F = \dd{A}$: $F$ è chiusa ma non esatta!]
+The form \(F\) is closed: $\dd{F}=0$, but it is not exact; the manifold is not contractible, therefore Poincaré's lemma does not apply.
+
 %The second omothopy group for euclidean space is:
 
 %\begin{equation}
@@ -89,17 +90,20 @@ A=\frac{m}{2}\left(c-\cos\theta\right)\dd{\phi},
 where $c$ is a parameter that can be arbitrary set. Differentiating this equation we have
 
 \begin{equation}
-dA=\frac{m}{2}\left(c-\cos\theta\right)d^2\phi-\frac{m}{2}d\cos\theta\wedge d \phi=\frac{m}{2}\sin\theta d\theta\wedge d \phi,
+\dd{A}=\frac{m}{2}\left(c-\cos\theta\right)\dd^2\phi-\frac{m}{2}d\cos\theta\wedge d \phi=\frac{m}{2}\sin\theta \dd{\theta}\wedge \dd{\phi}\,,
 \end{equation}
-where we used the fact that the first term evanishes because of antisimmetrization.
+where the first term vanishes because \(\dd^2 = 0\).
 
 We see that in the space there are two possible choiches of $c$ which can produce singularities:
 
 \begin{itemize}
-\item For $c=1$ A has singularities along z<0 axis (this is called Dirac string).
-\item For $c=-1$ in fact A has singular values for z>0 axis.
+\item For $c=1$ the potential \(A\) is singular along the \(z<0\) axis;
+\item For $c=-1$, instead, \(A\) is singular along the \(z>0\) axis.
 \end{itemize}
-Indeed, for every other choice of $c$ between these two values, $A$ presents singularities along a particular string for the related value of $\theta$. In all these cases we see that now topology is not trivial, and for this reason Poincarè theorem is no more valid.
+
+The \(z \lessgtr 0\) ray is called a \emph{Dirac string}.
+
+Indeed, for every other choice of $c$ between these two values, $A$ presents singularities along a particular string, which is at the corresponding angle $\theta$ with respec. In all these cases we see that now topology is not trivial, and for this reason Poincarè theorem is no more valid.
 
 
 Following this reasoning, it holds that we should define the two aforementioned choices for $A$ as, respectivelly, $A^+$ and $A^-$. We say that $U_+$ is the manifold where we defined $A_+$ and $U_-$ the one for $A_-$.
