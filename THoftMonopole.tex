@@ -2,7 +2,7 @@
 \begin{document}
 
 \section{’t Hooft-Polyakov Monopoles}
-It will be shown that free magnetic monopoles in the physical vacuum are possible as regular solutions of the field equations of the Georgi-Glashow model, following the notorious works published by Gerard 't Hoft \cite{Hof:Mon} and Aleksander Polyakov \cite{Pol:Mon} in 1974. 
+In this section, it will be shown that free magnetic monopoles in the physical vacuum are possible as regular solutions of the field equations of the Georgi-Glashow model, following the notorious works published by Gerard 't Hoft \cite{Hof:Mon} and Aleksander Polyakov \cite{Pol:Mon} in 1974. 
 \subsection{An Intuitive Example}
 A simple and very clarifing example, taken from \cite{Hof:Mon}, will be discussed in order to give an intuitve idea of how it is possible to have monopoles in quantum fied theory.  \\
 We should consider a two-dimensional spherical surface $S_2$ in the usual 3D space, with some magnetic flux $\Phi$ entering in a spot. If the spot is surrounded by a contour $C_0$, the potential around $C_0$ should be equal to: 
@@ -12,7 +12,7 @@ We should consider a two-dimensional spherical surface $S_2$ in the usual 3D spa
 where $\Lambda$ is a gauge transformation, which acts on the wavefunction in this way: $\psi \rightarrow e^{i\Lambda} \psi $. 
 While $\Lambda$ is a multivalued function, $\Phi$, being a physical field, is required to be a single-valued function. Since, 
 \begin{equation}
-    \Phi = \int_{C_0} \nabla \Lambda \cdot d\Vec{l},
+    \Phi = \int_{C_0} \nabla \Lambda \cdot \dd{\Vec{l}},
 \end{equation} 
 $\Phi$ should be equal to an integer multiplied for $2 \pi  $, a complete gauge rotation along the contour. 
 In an Abelian gauge theory, there must be another spot from which the flux comes out, because the $2k \pi$ rotation cannot be contnuously changed into a constant lowering the contour $C_0$ over the sphere. \\ 
@@ -66,10 +66,13 @@ $ W_{\mu}^{\pm} $&    Weak Interaction Bosons? &  $ae\hbar$                     
 
 For the sake of simplicity, we chose as a minimum, the vector $\vec{a}= (0,0,a)$. Then, working in the so-called unitary gauge, the fluctuation vector $\vec{\chi}$ can be written in such a way that $\vec{\chi} = (0,0,\chi) $.
 At this point, we should expand the Higgs field around $\vec{a}$ in order to read the masses of the bosons from the quadratic term coefficients:
-\begin{gather}
+\begin{subequations}
+ \begin{gather}
 V(\phi)\simeq  \frac{1}{2}  \left(\sqrt{2 \lambda} a\right)^2 \vec{\chi}^2 = \left( \frac{M_\chi}{\hbar }\right)^2 \vec{\chi}^2 \\
  \frac{1}{2}D_{\mu}\vec{\phi} \cdot  D^\mu \vec{\phi} \simeq  \frac{1}{2}D_{\mu}\vec{a} \cdot  D^\mu \vec{a}  + \frac{1}{2} \left( ea \right)^2 =\frac{1}{2}D_{\mu}\vec{a} \cdot  D^\mu \vec{a}  + \frac{1}{2} \left( \frac{M_W}{\hbar} \right)^2
 \end{gather}
+\end{subequations}
+
 
 To deduce the charges of the bosons, instead, we should see how the covariant derivative, which describese the minimal coupling for the photon $A_{\mu}$: 
 \begin{equation}
@@ -103,7 +106,7 @@ In the Higgs vacuum, the Higgs field is such that $\vec{\phi}^2 = \vec{a}^2$. It
  
  In order to satisfy the first condition, we require that the following integral has a finite value: 
  \begin{equation}
- E = \int_{\mathbb{R}^3} T_{00} \ d^3x.
+ E = \int_{\mathbb{R}^3} T_{00} \dd[3]{x}.
  \end{equation}
  This is equivalent to asking that at spatial infinity the Higgs Field $\vec{\phi}$ approaches the Higgs Vacuum, which is represented by the set $\mathcal{M}_0 = \{ \vec{\phi}(\vec{r})  \mid  \vec{\phi}^2 = \vec{a}^2 \}$. 
  Hence, given $\Sigma_{\infty}$ the spherical surface in $\mathbb{R}^3$ with an infinite radius, we require the existance of a continuous function, 
@@ -128,33 +131,40 @@ In the Higgs vacuum, the Higgs field is such that $\vec{\phi}^2 = \vec{a}^2$. It
   \end{equation}
  
    \paragraph{Serach for the solutions}The spherical symmetry condition, instead, allows us to claim that there might exist two real functions $H(aer)$ and $K(aer)$ and that our solution to the Euler-Lagrange equations of the Georgi-Glashow model, might have this form: 
+\begin{subequations}
   \begin{align}
       \vec{\phi}(\vec{r}) &= \frac{\vec{r}}{er^2}H(aer) \\ 
       W^{\mu =i}_{a} &= - \epsilon_{aij}\frac{r^j}{er^2}(1 - K(aer)) \\
       W^{\mu=0}_{a}&=0. 
   \end{align}
+\end{subequations}
+
   
   Plugging such solutions into the Euler-Lagrange equations of the model, we obtain two differential equation describing the dynamics of $H(\xi = aer)$ and $K(\xi = aer)$: 
+  \begin{subequations}
   \begin{align}
-  \xi ^2 \frac{d^2 K}{d \xi^2} &= KH^2 + K(K^2-1)   \label{eq:H}\\
-  \xi ^2 \frac{d^2 H}{d \xi^2} &= 2K^2H + \frac{\lambda}{e^2}H (H^2 -\xi^2), \label{eq:K}
+  \xi ^2 \dv[2]{K}{\xi} &= KH^2 + K(K^2-1)   \label{eq:H}\\
+  \xi ^2 \dv[2]{H}{\xi} &= 2K^2H + \frac{\lambda}{e^2}H (H^2 -\xi^2), \label{eq:K}
   \end{align}
+  \end{subequations}
   
   In order to find the boundary conditions for the differential equations above, we should write the energy of the system, as a function of $H(\xi)$ and $K(\xi)$,
 
   \begin{equation}
   \begin{split}
-  E = \frac{4 \pi a}{e} \int_{0}^{\infty} \frac{d \xi}{\xi^2}  \bigr( \xi^2\frac{dH}{d\xi}  &+  \frac{1}{2}\left( \xi \frac{dH}{d\xi} -H \right)^2  +  
+  E = \frac{4 \pi a}{e} \int_{0}^{\infty} \frac{\dd{\xi}}{\xi^2}  \bigr( \xi^2\dv{H}{\xi}  &+  \frac{1}{2}\left( \xi \dv{H}{\xi} -H \right)^2  +  
   \frac{1}{2} \left( K^2 - 1 \right)^2 +  \\
   & +K^2 H^2 + \frac{\lambda}{4e^2} \left( H^2-\xi^2\right)^2   \bigr)
   \end{split}
   \end{equation}
   
   and require that such an integral has a finite value. It follows that: 
+\begin{subequations}
   \begin{align}
  && \xi \to \infty &\colon  \quad \frac{H}{\xi} \to 1 \qquad \ K \to 0     \label{eq:bound1}\\
  && \xi  \to 0      &\colon  \quad H \sim  O(\xi)     \quad K \sim \ 1 + O(\xi)  \label{eq:bound2}
   \end{align}
+\end{subequations}
  
  We should note that the conditons that $H(\xi)$ approaches to spatial infinity linearly in $\xi$ implies that at an infinte distance from the origin, the Higgs field has the following form: 
  \begin{equation}
@@ -185,8 +195,8 @@ This implies that also   $\vec{G}_{\mu \nu}$ is smooth and regular in the origin
 In the limit $r \to \infty$, equations \ref{eq:H} and \ref{eq:K}, provided the boundary conditions \ref{eq:bound1} and \ref{eq:bound2}, have such form: 
 \begin{equation}
 \begin{cases}
-\frac{d^2 K}{d \xi^2}    = K    \\
-\frac{d^2 h}{d \xi^2}   =  \frac{2 \lambda}{e^2} h \\
+\dv[2]{K}{\xi}    = K    \\
+\dv[2]{h}{\xi}   =  \frac{2 \lambda}{e^2} h \\
 \end{cases}
 \implies
 \begin{cases}
@@ -239,13 +249,13 @@ B_i = \epsilon_{ijk} F_{jk} =   \epsilon_{ijk} \left[ \frac{1}{a^3 e} \vec{\phi}
 Therefore, the total magnetic charge $g_\Sigma$ contained in $\Sigma$ can be  calculated as: 
 \begin{equation}
 \begin{split}
-g_\Sigma &= \int_\Sigma \vec{B} \cdot d\vec{S} = \\
-         &= - \frac{1}{2ea^2}\int_\Sigma  \epsilon_{ijk} \vec{\phi} \cdot \left(  \partial_j\vec{\phi} \times \partial_k \vec{\phi}  \right) \ dS_i
+g_\Sigma &= \int_\Sigma \vec{B} \cdot \dd{\vec{S}}  \\
+         &= - \frac{1}{2ea^2}\int_\Sigma  \epsilon_{ijk} \vec{\phi} \cdot \left(  \partial_j\vec{\phi} \times \partial_k \vec{\phi}  \right) \dd{S_i}
 \end{split}
 \end{equation} 
 It can be proved that the quantity:
 \begin{equation}
-N_\Sigma : = \frac{1}{8 \pi a^3} \int_\Sigma  \epsilon_{ijk} \vec{\phi} \cdot \left(  \partial_j\vec{\phi} \times \partial_k \vec{\phi}  \right) \ dS_i
+N_\Sigma : = \frac{1}{8 \pi a^3} \int_\Sigma  \epsilon_{ijk} \vec{\phi} \cdot \left(  \partial_j\vec{\phi} \times \partial_k \vec{\phi}  \right) \dd{S_i}
 \end{equation}
 is an integer and corresponds to the winding number of the map $\vec{\phi} \colon \Sigma \to \mathcal{M}_0 = \{ \vec{\phi} : \vec{\phi}^2 = a^2 \}$. 
 Hence we have just derived a quantisation condition for the magnetic charge analogue to the Dirac's one apart from a $\frac{1}{2}$ coefficient: 
@@ -268,7 +278,7 @@ g = - \frac{4}{\pi e} N_\Sigma= - \frac{2}{\pi e_{min}} N_\Sigma
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 In conclusion, the Dirac Monopole and the 't Hooft-Polyakov Monopole share the same quantisation condition: 
 \begin{equation}
-g = - \frac{2}{\pi e} N \qquad N  \mathbb{Z}
+g = - \frac{2}{\pi e} N \qquad N \in  \mathbb{Z}
 \end{equation}
 However, there are many relevant differences between the two, which are summarized below:
 \begin{itemize}
@@ -305,18 +315,24 @@ In fact we may take the Lagrangian of the Georgi-Glashow model, which can be fou
   \end{align}
   
   Plugging  them into the Euler-Lagrange equations we obtain a system of three differential equation describing the dynamics of the functions $J(\xi = aer)$, $H(\xi = aer)$ and $K(\xi = aer)$: 
-    \begin{align}
-  \xi ^2 \frac{d^2 J}{d \xi^2} &= 2JK^2   \label{eq:J2}\\
-  \xi ^2 \frac{d^2 H}{d \xi^2} &= 2K^2H + \frac{\lambda}{e^2}H (H^2 -\xi^2), \label{eq:K2}\\
-  \xi ^2 \frac{d^2 K}{d \xi^2} &= K \left( K ^2 -J^2 + H^2 -1   \right)  \label{eq:K2}
+%
+\begin{subequations}
+ \begin{align}
+  \xi ^2 \dv[2]{J}{\xi} &= 2JK^2   \label{eq:J2}\\
+  \xi ^2 \dv[2]{H}{\xi} &= 2K^2H + \frac{\lambda}{e^2}H (H^2 -\xi^2), \label{eq:H2}\\
+  \xi ^2 \dv[2]{K}{\xi} &= K \left( K ^2 -J^2 + H^2 -1   \right)  \label{eq:K2}
   \end{align}
+\end{subequations}
+
  It should be noticed that the equations found by 't Hooft and Polyakov, \ref{eq:H} and \ref{eq:K}, can be obtained from those above computing the limit $J \to 0$.
  The boundary conditions on $H(aer)$ and $K(aer)$ are analogous to expressions \ref{eq:bound1} and \ref{eq:bound2}, whereas the boundary conditions are the following ones: 
-   \begin{align}
+ \begin{subequations}
+ \begin{align}
  \xi \to \infty &\colon  \ J \to 0     \label{eq:bound3}\\
  \xi  \to 0   &\colon  \ J \sim \ 1 + O(\xi)  \label{eq:bound4}
   \end{align}
-\medskip
+ \end{subequations}
+\medskip 
 With a procedure similar to the one used in section \ref{sect:Ansatz}, we can calculate the electromagnetic tensor: 
 \begin{equation}
  F_{\mu \nu} = \frac{1}{a} \vec{\phi} \cdot \vec{G}_{\mu \nu },
@@ -327,14 +343,14 @@ F_{ij}= \epsilon_{ija} \frac{r_a}{r} \left(   - \frac{1}{er^2}    \right).
 \end{equation}
 However, what is new from the 't Hooft-Polyakov Monopoles, is that a non-zero electric field appears: 
 \begin{equation}
-E^i = F^{0i}= - \frac{r^i}{r} \frac{d}{dr} \left[ \frac{J(r)}{r} \right],
+E^i = F^{0i}= - \frac{r^i}{r} \dv{}{r} \left[ \frac{J(r)}{r} \right],
 \end{equation}
 and gives a total charge, which can be written as: 
 \begin{equation}
 \begin{split}
-Q &= \int dS_i \  F_{0i} = \\
-  &= \int d^3 x \ \partial_i F_{0i}\\
-  &= - \frac{8 \pi }{e}\int_0^{\infty} dr \ \frac{JK^2}{r}\\.
+Q &= \int \dd{S_i}  F_{0i} = \\
+  &= \int \dd[3]{x} \partial_i F_{0i}\\
+  &= - \frac{8 \pi }{e}\int_0^{\infty} \dd{r} \frac{JK^2}{r}\,.
 \end{split}
 \end{equation}
 In conclusion, we get an object, which has a quantised magnetic charge but has an electric charge, with no quantisation condition. 

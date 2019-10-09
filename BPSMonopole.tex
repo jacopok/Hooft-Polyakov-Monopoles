@@ -1,7 +1,7 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
 
-\section{BPS Monopole}
+\subsection{BPS Monopole}
 
 We wish to estimate the mass (or, equivalently, energy) of the 't Hooft-Polyakov monopole: in general, the mass of a dyon be given by the integral
 %
@@ -14,7 +14,7 @@ where \(G_{0i}^a = E_i^a\) and \(G_{ij}^a = B_i^a\).
 
 Now, we will derive a lower bound for this mass. Then, we will explicitly show that this bound can be reached by a specific solution: the BPS monopole.
 
-\subsection{The Bogomol'nyi Bound}
+\subsubsection{The Bogomol'nyi Bound}
 
 First of all we drop the (always positive) terms \(D_0 \phi^a D_0 \phi^a\) and \(V(\phi)\).
 Then, we apply the famous ``squaring trick'': we add and subtract some terms depending on a generic angle \(\theta\):
@@ -81,7 +81,7 @@ The sharpest bound occurs when the \((q, g)\) and \((\sin \theta, \cos \theta)\)
 
 In the 't Hooft-Polyakov case, this simplifies to \(E \geq a \abs{g} \).
 
-\subsection{Saturation of the Bogomol'nyi Bound}
+\subsubsection{Saturation of the Bogomol'nyi Bound}
 
 A state which attains the lower bound is called a Bogomol'nyi–Prasad–Sommerfield --- for short BPS --- monopole.
 
@@ -104,10 +104,12 @@ If we insert the 't Hooft-Polyakov \emph{ansatz} in the Bogomol'nyi condition \e
 \begin{subequations}
 \begin{align}
   \xi \dv{K}{\xi}  &=  -KH   \\
-  \xi \dv{H}{\xi} &= -K^2 + H + 1 \,:
+  \xi \dv{H}{\xi} &= -K^2 + H + 1 \,;
 \end{align}
 \end{subequations}
 
 these can be solved analytically, when coupled to the regular monopole equations of motion.
+
+\todo{Add computations to show that the energy density of the monopole is finite at the origin.}
 
 \end{document}

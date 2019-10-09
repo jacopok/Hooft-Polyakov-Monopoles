@@ -3,70 +3,110 @@
 
 
 \section{Dirac Monopoles}
+In 1931 Dirac showed that postulating the existence of a magnetic charge, we can provide a theoretical explanation for the quantisation of the electric charge \cite{Dirac}. 
+In this section we will recover the basic ideas exposed in Dirac's paper and show how they were generalised to a particle with both charges, called \textit{dyon}, by Schwinger in 1966 \cite{S:dyon} and Zwanziger in 1968 \cite{Z:dyon}.
 
-To date no experiment has shown the existence of magnetic monopoles, but classical electromagnetic theory admits their existence in its Gauge formulation \cite{Dirac}.
-This follows naturally from Maxwell equations' duality: monopoles are interesting solutions in a space with nontrivial topology, since from topological arguments one can derive the quantization of magnetic and electric charge.
+%To date no experiment has shown the existence of magnetic monopoles, but classical electromagnetic theory admits their existence in its gauge formulation \cite{Dirac}.
+%This follows naturally from Maxwell equations' duality: monopoles are interesting solutions in a space with nontrivial topology, since from topological arguments one can derive the quantization of magnetic and electric charge.
 
-\subsection{Monopole as an electromagnetic solution}
+\subsection{Magnetic Monopole and Electromagnetic Duality}
 
-The covariant form of the nonhomogeneous Maxwell's equations in a vacuum is represented with respect to the electromagnetic tensor $F^{\mu \nu}$, where we encode both electric and magnetic fields:
+The electromagnetic tensor $F^{\mu \nu}$, where both electric and magnetic fields are encoded:
 %
-\begin{align}
-&E^i=F^{0i}\\
-&B^i=\epsilon^{ijk}F^{jk}
-\end{align}
-%
-and reads
-%
-\begin{equation}\label{Maxwell}
-\partial_{\mu}F^{\mu \nu}=0\,.
+\begin{equation}
+E^i=F^{0i} \qquad \qquad B^i=\epsilon^{ijk}F^{jk}\,,
 \end{equation}
-
-We thus define the dual tensor
-$\tilde{F}^{\mu\nu}=*F^{\mu\nu}=-\frac{1}{2}\varepsilon^{\mu \nu \rho \sigma}F_{\rho \sigma}$,
-such that $\dd{F}=0$.
-The electromagnetic duality relation with this definition consists in the formal substitution of $(\vec E,\vec B)\to(\vec B,-\vec E)$:
 %
+is an antisymmetric tensor and can be written as a 2-form (see appendix \ref{sec:differential-forms}): 
+%
+\begin{equation}
+F = \frac{1}{2} F_{\mu\nu}\dd{x^\mu} \wedge \dd{x^\nu}
+\end{equation}
+%
+The tensor $F^{\mu \nu}$ obeys Maxwell's equations:
+%
+\begin{subequations} \label{Maxwell}
+\begin{align}
+\partial_{\mu}F^{\mu \nu}&= j^\nu \label{maxwell-nonhom} \\
+\partial_{[\mu} F_{\nu\rho]} &=0 \label{maxwell-hom} \,.
+\end{align}
+\end{subequations}
+The duality operation (see appendix \ref{sec:differential-forms}) acts on the electromagnetic tensor as follows: 
+\begin{equation}
+\tilde{F}^{\mu\nu}=*F^{\mu\nu}=-\frac{1}{2}\varepsilon^{\mu \nu \rho \sigma}F_{\rho \sigma},
+\end{equation}
+%
+%With respect to the electromagnetic tensor $F = \frac{1}{2} F_{\mu\nu}\dd{x^\mu} \wedge \dd{x^\nu}$and its dual $*F$ 
+%
+and allows us to write Maxwell's equations in this way: 
+%
+\begin{equation} \label{eq:form-maxwell}
+    \dd{F} = 0 \qquad  \qquad \dd{*F} = * j\,,
+\end{equation}
+%
+where we introduced the current form $j = j_\mu \dd{x^\mu}$.
+%
+Now, it is clear to see that, if $j=0$, equations \ref{eq:form-maxwell} are invariant with respect to the duality transformation $F \rightarrow *F$, since $*^2 = -\mathbb{1}$ for 2-forms. Such symmetry is broken when $j\neq 0$: however, we can preserve invariance under duality when $j\neq 0$ if we introduce a ``magnetic current'' $j_m$ such that $\dd{F} = *j_m$, and complement the duality transformation as such:
+\begin{equation}
+\begin{cases}
+j \rightarrow j_m \\
+j_m \rightarrow -j \\
+\end{cases}.
+\end{equation}
+%
+The electromagnetic duality transformation corresponds to the formal substitution of $(\vec E,\vec B)\to(\vec B,-\vec E)$:
+%
+\begin{subequations}
 \begin{align}
 &\tilde{E^i}=\tilde{F^{i0}}=\frac{1}{2}\epsilon^{i0jk}F_{jk}=-\frac{1}{2}\epsilon^{ijk}F^{ik}=B^i\\
 &\tilde{B^i}=-\frac{1}{2}\epsilon^{ijk}\tilde{F^{jk}}=-\frac{1}{2}\epsilon^{ijk}\epsilon^{jkl0}F_{l0}=-\frac{1}{2}\epsilon^{ijk}\epsilon^{ljk}E^l=-E^i
 \end{align}
-%
-In this case a particular solution of Maxwell's equations in $x^\mu \in \mathbb R \times (\mathbb{R}^3 \setminus \qty{0}$), \ie an electromagnetic field which satisfies \eqref{Maxwell} is the electric monopole:
-%
-\begin{equation}\label{ElectricMonopole}
-E^i=\frac{e}{2r^2}x^i,
-\end{equation}
-such that
+\end{subequations}
 
+%A particular solution of the regular non-homogeneous Maxwell equations for $x^\mu \in \mathbb R \times (\mathbb{R}^3 \setminus \qty{0}$), \ie an electromagnetic field which satisfies \eqref{Maxwell} is the electric monopole, which represents a point-like electric charge $e$ fixed at the origin:
+%
+If we consider the configuration, where an electrically charged point-like particle lies in the origin, the electric and magnetic field have such form:
+\begin{gather}\label{ElectricMonopole}
+E^i=\frac{e}{2r^2}x^i \\
+B^i =0\\
+\end{gather}
+%
+%which satisfies
+%
+\begin{subequations}
 \begin{align}
 \partial_i E^i=2\pi e \delta^3(\vec r),\\
-e=\frac{1}{2\pi}\int_{S^2} E^i \cdot d S_i.
+e=\frac{1}{2\pi}\int_{S^2} E^i d S^i.
 \end{align}
-Now we consider the dual equivalent solution, which is similar to \eqref{ElectricMonopole}:
+\end{subequations}
+%
+Now, we might apply a duality transformation to equation \eqref{ElectricMonopole} and obatin the configuration where a magnetic point-like monopole is placed in the origin and the fields have such form :
+%
+\begin{gather}
+\label{MagneticMonopole}
+B^i=\frac{m}{2r^2}x^i\\
+E^i=0,
+\end{gather}
+%
+which corresponds to this electromagnetic tensor:
+\begin{equation}\label{eq:Fij}
+F_{ij}=\frac{m}{2r^3}\varepsilon_{ijk}x^k \qquad F_{i0}=0.
+\end{equation}
+%
+We now compute the 2-form associated to the tensor in equation \ref{eq:Fij}:
+%
+\begin{equation}
+F=F_{ij}\dd{x^i}\dd{x^j}=\frac{m}{4r^3}\varepsilon_{ijk}x_k\dd{x^i}\dd{x^j}=\frac{m}{2}\sin\theta \dd{\theta}\wedge \dd{\phi}\,,
+\end{equation}
+%
+and deduce from it the value of the magnetic charge in the origin:
+%
+\begin{equation} \label{eq:MagnCharge}
+\int_{\mathbb R^3} \dd{F} = \int_{S^2} F=\frac{m}{2}\int_{S^2}\sin\theta \dd{\theta}\wedge \dd{\phi}=2\pi m .
+\end{equation}
+%
+In the first passage of equation \ref{eq:MagnCharge}, we applied Stokes' theorem to an arbitrarily large sphere, because the integrand function has no radial dependence.
 
-\begin{equation}\label{MagneticMonopole}
-B^i=\frac{m}{2r^2}x^i,
-\end{equation}
-and since in this case
-
-\begin{equation}
-F_{ij}=\frac{m}{2r^3}\varepsilon_{ijk}x^k\,,
-\end{equation}
-%
-we can thus define
-%
-\begin{equation}
-F=F_{ij}\dd{x^i}\dd{x^j}=\frac{m}{4r^3}\varepsilon_{ijk}x^k\dd{x^i}\dd{x^j}=\frac{m}{2}\sin\theta \dd{\theta}\wedge \dd{\phi}\,,
-\end{equation}
-%
-and
-%
-\begin{equation}
-\int_{\mathbb R^3} \dd{F} = \int_{S^2} F=\frac{m}{2}\int_{S^2}\sin\theta \dd{\theta}\wedge \dd{\phi}=2\pi m\,,
-\end{equation}
-%
-where we applied Stokes' theorem to an arbitrarily large sphere: it does not matter since we only had angular dependence.
 \subsection{Dirac Quantization for the Monopole}
 We can not find for this solution a global vector potential A such that $F=\dd{A}$: if it existed, we should have
 
@@ -165,7 +205,7 @@ that for $\lambda=m\phi$ we obtain $em\in \mathbb{Z}$, which is Dirac quantisati
 \subsection{Angular momentum conservation}
 Let $L$ be now the orbital angular momentum of a rotating particle with mass $m$ and charge $e$. The particle experiments a variation of $L^i=\epsilon^{ijk}r_jm\dot r_k$, such that
 \begin{align}
-\frac{dL^i}{dt}=\epsilon^{ijk}r_jm\ddot r_k=\epsilon^{ijk}r_j\epsilon^{klm}e\dot r_lB_m=\epsilon^{ijk}r_j\epsilon^{klm}e\dot r_l\frac{g}{4\pi r^3}B_m=\frac{d}{dt}\left(\frac{egr^i}{4\pi r}\right).
+\dv{L^i}{t}=\epsilon^{ijk}r_jm\ddot r_k=\epsilon^{ijk}r_j\epsilon^{klm}e\dot r_lB_m=\epsilon^{ijk}r_j\epsilon^{klm}e\dot r_l\frac{g}{4\pi r^3}B_m=\dv{}{t}\left(\frac{egr^i}{4\pi r}\right).
 \end{align}
 This implies that a particle into the monopular field conservs another quantity that is the whole momentum
 \begin{equation}
@@ -173,17 +213,20 @@ J^i=L^i-\frac{egr^i}{4\pi r}.
 \end{equation}
 \subsection{Witten Effect}
 Now we want to generalize quantization that are deduced from a generic gauge transformation about a direction $\vec\phi$. In this case we have that variations of a generic isovector $\vec v$ and vector potential $\vec A_\mu$ are
+\begin{subequations}
 \begin{align}
-&\delta\vec v=\frac{\vec\phi\times\vec v}{a}\nonumber\\
+&\delta\vec v=\frac{\vec\phi\times\vec v}{a}\\
 &\delta\vec A_\mu=-\frac{D_\mu\vec\phi}{ea},
 \end{align}
+\end{subequations}
+
 where we have the normalization constant $a$, the electric charge $e$ and where we defined the covariant derivative
 \begin{equation}
 D_\mu\vec\phi=\partial_\mu\vec\phi-e\vec A_\mu\times\vec\phi.
 \end{equation}
 Considering now the operator $e^{2\pi i N}$, where $N$ is the same operator with Higgs solution that will be defined in the next section. In the vacuum $D_\mu\vec\phi=0$ and at infinity in space we have that this operator is equal to identity. Using the variations defined above, we can obtain the Noether charge of the related transformations, which is for $\delta\vec\phi=0$
 \begin{equation}
-N=-\int_{\mathcal{R}^3}\frac{1}{ae}\frac{\partial\mathcal{L}}{\partial\partial_0\vec A_i}\cdot D_i\phi=\frac{q}{e},
+N=-\int_{\mathbb{R}^3}\frac{1}{ae}\frac{\partial\mathcal{L}}{\partial\partial_0\vec A_i}\cdot D_i\phi=\frac{q}{e},
 \end{equation}
 where we used the fact that the conjugated momentum of $\vec A_i$ is $-\vec E_i$.
 Instead, if we add a new term in the action
@@ -192,10 +235,10 @@ Instead, if we add a new term in the action
 \end{equation}
 where $\vec G^{\alpha\beta}$ are the gauge field-strengths for $A$. In this case we have a modify of $N$ by a factor
 \begin{equation}
-\Delta N=-\frac{e\theta}{16\pi^2a}\int_{\mathcal{R}^3}\epsilon^{0i\alpha\beta}\vec G_{\alpha\beta}D_i\vec\phi=\frac{e\theta g}{8\pi^2},
+\Delta N=-\frac{e\theta}{16\pi^2a}\int_{\mathbb{R}^3}\epsilon^{0i\alpha\beta}\vec G_{\alpha\beta}D_i\vec\phi=\frac{e\theta g}{8\pi^2},
 \end{equation}
 with the magnetic charge $g$. Rewriting this expression it follows, for $eg=-4\pi$ (the t' Hooft-Polyakov monopole result, which will be obtained later)\begin{equation}
 q=ne+\frac{e\theta}{2\pi},
 \end{equation}
-with $n\in\mathbf{Z}$. This is the generalization to have consistency with quantization condition, a result by Edward Witten \cite{Witten}.
+with $n\in\mathbb{Z}$. This is the generalization to have consistency with quantization condition, a result by Edward Witten \cite{Witten}.
 \end{document}

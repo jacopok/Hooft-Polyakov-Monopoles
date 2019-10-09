@@ -3,8 +3,24 @@
 
 \appendix
 
-\section{Homotopy}
+\section{Homotopy} \label{sec:homotopy}
 
-\section{Differential forms and Poincaré's lemma}
+If we have a topological space \(X\), the set of all maps \(f\) from \([0,1]^n\) such that  \(f(\vec{0}) = f(\vec{1} )=x_0 \in X\) considered modulo homotopy and with the operation of composition is called the \(n\)-th homotopy group \(\Pi_n (X; x_0)\). The dependence on \(x_0\) is actually trivial, it only matters to which connected component of \(X\) the element \(x_0\) belongs.
+
+Composition is to be considered as such:
+
+\begin{equation}
+  (f+g) (\vec{x} ) = \begin{cases}
+  f(2x_1, x_2, \dots, x_n) \qquad & x_1 \in [0, 1/2 ] \\
+  g(2x_1-1, x_2, \dots, x_n) \qquad & x_1 \in [1/2, 1] \,.
+  \end{cases}
+\end{equation}
+
+Some notable cases are: \(\Pi_n (S^m) = 0 \) for \(n<m\) and \(\Pi_n (S^n) = (\mathbb Z, +)\).
+
+
+\section{Differential forms and Poincaré's lemma} \label{sec:differential-forms}
+
+
 
 \end{document}
