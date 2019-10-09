@@ -3,96 +3,119 @@
 
 
 \section{Dirac Monopoles}
-The covariant form of Maxwell's equations is represented with respect to  the electromagnetic tensor $F^{\mu \nu}$
+
+To date no experiment has shown the existence of magnetic monopoles, but classical electromagnetic theory admits their existence in its Gauge formulation \cite{Dirac}.
+This follows naturally from Maxwell equations' duality: monopoles are interesting solutions in a space with nontrivial topology, since from topological arguments one can derive the quantization of magnetic and electric charge.
+
+\subsection{Monopole as an electromagnetic solution}
+
+The covariant form of the nonhomogeneous Maxwell's equations in a vacuum is represented with respect to the electromagnetic tensor $F^{\mu \nu}$, where we encode both electric and magnetic fields:
 %
-\begin{equation}
-  F^{\mu\nu} = \begin{bmatrix}
-  0   & E_1  & E_2  & E_3 \\
-  -E_1   & 0  & B_3  & -B_2 \\
-  -E_2   & -B_3  & 0  & B_1 \\
-  -E_3   & B_2  & -B_1  & 0
-  \end{bmatrix}\,,
-\end{equation}
+\begin{align}
+&E^i=F^{0i}\\
+&B^i=\epsilon^{ijk}F^{jk}
+\end{align}
 %
 and reads
+%
 \begin{equation}\label{Maxwell}
 \partial_{\mu}F^{\mu \nu}=0\,.
 \end{equation}
 
-We thus define
+We thus define the dual tensor
 $\tilde{F}^{\mu\nu}=*F^{\mu\nu}=-\frac{1}{2}\varepsilon^{\mu \nu \rho \sigma}F_{\rho \sigma}$,
-such that $dF=0$.
-In this case a particular solution of Maxwell equations, i.e. an electromagnetic field which satisfies \eqref{Maxwell} is the electric monopole:
-
+such that $\dd{F}=0$.
+The electromagnetic duality relation with this definition consists in the formal substitution of $(\vec E,\vec B)\to(\vec B,-\vec E)$:
+%
+\begin{align}
+&\tilde{E^i}=\tilde{F^{i0}}=\frac{1}{2}\epsilon^{i0jk}F_{jk}=-\frac{1}{2}\epsilon^{ijk}F^{ik}=B^i\\
+&\tilde{B^i}=-\frac{1}{2}\epsilon^{ijk}\tilde{F^{jk}}=-\frac{1}{2}\epsilon^{ijk}\epsilon^{jkl0}F_{l0}=-\frac{1}{2}\epsilon^{ijk}\epsilon^{ljk}E^l=-E^i
+\end{align}
+%
+In this case a particular solution of Maxwell's equations in $x^\mu \in \mathbb R \times (\mathbb{R}^3 \setminus \qty{0}$), \ie an electromagnetic field which satisfies \eqref{Maxwell} is the electric monopole:
+%
 \begin{equation}\label{ElectricMonopole}
-\vec E=\frac{e}{2r^2}\hat{r},
+E^i=\frac{e}{2r^2}x^i,
 \end{equation}
 such that
 
 \begin{align}
-\vec \nabla \vec E=2\pi e \delta^3(\vec r),\\
-e=\frac{1}{2\pi}\int_{S^2}\vec E \cdot d\vec S.
+\partial_i E^i=2\pi e \delta^3(\vec r),\\
+e=\frac{1}{2\pi}\int_{S^2} E^i \cdot d S_i.
 \end{align}
-Now we consider formally another solution, which is similar to \eqref{ElectricMonopole}:
+Now we consider the dual equivalent solution, which is similar to \eqref{ElectricMonopole}:
 
 \begin{equation}\label{MagneticMonopole}
-\vec B=\frac{m}{2r^2}\hat{r},
+B^i=\frac{m}{2r^2}x^i,
 \end{equation}
-and since
+and since in this case
 
 \begin{equation}
-F_{ij}=\frac{m}{2r^3}\varepsilon_{ijk}x^k,
+F_{ij}=\frac{m}{2r^3}\varepsilon_{ijk}x^k\,,
 \end{equation}
-we can find
-
+%
+we can thus define
+%
 \begin{equation}
-F=F_{ij}dx^idx^j=\frac{m}{4r^3}\varepsilon_{ijk}x^kdx^idx^j=\frac{m}{2}\sin\theta d\theta\times d\phi,
+F=F_{ij}\dd{x^i}\dd{x^j}=\frac{m}{4r^3}\varepsilon_{ijk}x^k\dd{x^i}\dd{x^j}=\frac{m}{2}\sin\theta \dd{\theta}\wedge \dd{\phi}\,,
 \end{equation}
+%
 and
+%
+\begin{equation}
+\int_{\mathbb R^3} \dd{F} = \int_{S^2} F=\frac{m}{2}\int_{S^2}\sin\theta \dd{\theta}\wedge \dd{\phi}=2\pi m\,,
+\end{equation}
+%
+where we applied Stokes' theorem to an arbitrarily large sphere: it does not matter since we only had angular dependence.
+\subsection{Dirac Quantization for the Monopole}
+We can not find for this solution a global vector potential A such that $F=\dd{A}$: if it existed, we should have
 
 \begin{equation}
-dF=\frac{m}{2}\int_{S^2}\sin\theta d\theta\times d\phi=2\pi m.
+0\neq m=\int_{S^2}\frac{\dd{A}}{2\pi}=\int_{\partial S^2}\frac{A}{2\pi}=0\,,
 \end{equation}
-We can not obtain for this solution that exists a global vector potential A such that $F=dA$: if it existed, we should have
+%
+which implies that we must define at least two charts for our manifold.
+Since $\dd{F}=0$ on simply connected manifolds, $F$ is a closed form: from Poincaré's lemma, we know it is always exact. [Hai appena scritto che non esiste $A$ tc $F = \dd{A}$: $F$ è chiusa ma non esatta!]
+%The second omothopy group for euclidean space is:
+
+%\begin{equation}
+%\Pi_2\left(\mathcal{R}-\bigl\{0\bigr\}\right)=\mathcal{Z}.
+%\end{equation}
+A possible choice of $A$ is, in cylindric coordinates,
 
 \begin{equation}
-0\neq m=\int_{S^2}\frac{dA}{2\pi}=\int_{\partial S^2}\frac{A}{2\pi}=0,
+A=\frac{m}{2}\left(c-\cos\theta\right)\dd{\phi},
 \end{equation}
-which implies that we must define at least two charts for our mainfold.
-Since $dF=0$ on simply connected mainfolds, F is a closed form and, from Poincarré theorem, we know it is always exact. The second omothopy group for euclidean space is:
+where $c$ is a parameter that can be arbitrary set. Differentiating this equation we have
 
 \begin{equation}
-\Pi_2\left(\mathcal{R}-\bigl\{0\bigr\}\right)=\mathcal{Z}.
+dA=\frac{m}{2}\left(c-\cos\theta\right)d^2\phi-\frac{m}{2}d\cos\theta\wedge d \phi=\frac{m}{2}\sin\theta d\theta\wedge d \phi,
 \end{equation}
-A possible choice of $A$ is, in cilindric cohordinates,
+where we used the fact that the first term evanishes because of antisimmetrization.
 
-\begin{equation}
-A=\frac{m}{2}\left(c-\cos\theta\right)d\phi,
-\end{equation}
-and
-
-\begin{equation}
-dA=\frac{m}{2}\left(c-\cos\theta\right)d^2\theta-\frac{m}{2}d\cos\theta\times d \phi=\frac{m}{2}\sin\theta d\theta\times d \phi,
-\end{equation}
-which implies that in the space there are two possible choiches of $c$ which can produce singularities:
+We see that in the space there are two possible choiches of $c$ which can produce singularities:
 
 \begin{itemize}
 \item For $c=1$ A has singularities along z<0 axis (this is called Dirac string).
 \item For $c=-1$ in fact A has singular values for z>0 axis.
 \end{itemize}
+Indeed, for every other choice of $c$ between these two values, $A$ presents singularities along a particular string for the related value of $\theta$. In all these cases we see that now topology is not trivial, and for this reason Poincarè theorem is no more valid.
+
+
+Following this reasoning, it holds that we should define the two aforementioned choices for $A$ as, respectivelly, $A^+$ and $A^-$. We say that $U_+$ is the manifold where we defined $A_+$ and $U_-$ the one for $A_-$.
+
 We know from Stokes theorem that, for magnetic monopoles of eq. \eqref{MagneticMonopole}, taking a ball around the monopole itself,
 
 \begin{equation}\label{MagCharge}
-2\pi m=\int_{S_2} F=\lim\int_{S_2-D_{\varepsilon}}F=\lim\int dA=\lim\int_{C_{\varepsilon}} A,
+2\pi m=\int_{S_2} F=\lim_{\epsilon\to 0}\int_{S_2-D_{\varepsilon}}F=\lim_{\epsilon\to 0}\int dA=\lim_{\epsilon\to 0}\int_{C_{\varepsilon}} A,
 \end{equation}
-that implies $A\to\infty$. Indeed
+that implies naturally the divergence of $A$. Indeed
 
 \begin{equation}
 A^+-A^-=md\phi=d(m\phi),
 \end{equation}
-and for this reason we can see how $A$ behave under a transformation of unitary group $U(1)$. Let $U_+$ be the group where we defined $A_+$ and $U_-$ the one for $A_-$.
+and for this reason we can see how $A$ behave under a transformation of unitary group $U(1)$.
 Let $h$ be the transformation $h:U_+\cap U_- \to G=U(1)$, such that $x^i\to e^{ig\lambda(x)}$. In this case
-
 \begin{equation}
 A^+=A^-+d\lambda=h^{-1}A^-h-\frac{i}{g}h dh,
 \end{equation}
@@ -106,19 +129,38 @@ and the winding number is:
 \begin{equation}
 S_1=\frac{g\Delta\lambda}{2\pi}=mg.
 \end{equation}
-Now we consider the minimal coupling
+\subsection{Zwanziger-Schwinger Quantization for the Dyon}
+
+Now we consider the 1-dimentional Schrodinger equation:
+
 \begin{equation}
-S=S_0+\frac{e}{c}\int_{\gamma}A_{\mu}\frac{dx^{\mu}}{d\tau}d\tau,
+    -\frac{\hbar^2}{2m}\nabla^2\psi=i\hbar\frac{\partial\psi}{\partial t}
 \end{equation}
-which implies a rewriting of 4-momentum $p^{\mu}=\left(\frac{H}{c},\vec p\right)=p_0^{\mu}+\frac{e}{c}A^{\mu}$.
-In this case we have, for a Gauge transformation of potential $A'_{\mu}=A_{\mu}+\partial_{\mu}\lambda$,
+Where we have $\nabla_i=\partial_i+\frac{ie A_i}{h}$. We want this equation to respect the Gauge transformations, which means that we want it to be valid for any $A'_{\mu}=A_{\mu}+\partial_{\mu}\lambda$. This implies validity for any wavefunction
 \begin{equation}
 \ket{\psi'}=e^{\frac{ie\lambda}{\hbar c}}\ket{\psi},
 \end{equation}
-and for $\lambda=m\phi$ we obtain $em\in \mathcal{Z}$
+Now, the minimal coupling for the action of this system is
+\begin{equation}
+S=S_0+\frac{e}{c}\int_{\gamma}A_{\mu}\frac{dx^{\mu}}{d\tau}d\tau.
+\end{equation}
+In this case it follows
+that for $\lambda=m\phi$ we obtain $em\in \mathcal{Z}$, which is Dirac quantisation condition. The Dirac monopole, in classical theory, represents the solution of a limit for a thin and long solenoid that lays along the $z<0$ axis. In quantum mechanics it can be proven (Aharanov-Bohm effect) that, although the field lines are kept into the solenoid, the topological effect of the presence of the solenoid in the space can influence the dynamics of the system, in such a way that in quantum mechanics Dirac monopole cannot be interpreted as the limit of this physical exemple.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{DiracMon.png}
+\caption{A schematization of Dirac string}
+\label{fig-DirMon}
+\end{figure}
 
-\subsection{Dirac Quantization for the Monopole}
-\subsection{Zwazinger-Schwinger Quantization for the Dyon}
+\subsection{Angular momentum conservation}
+Let $L$ be now the orbital angular momentum of a rotating particle with mass $m$ and charge $e$. The particle experiments a variation of $L^i=\epsilon^{ijk}r_jm\dot r_k$, such that
+\begin{align}
+\frac{dL^i}{dt}=\epsilon^{ijk}r_jm\ddot r_k=\epsilon^{ijk}r_j\epsilon^{klm}e\dot r_lB_m=\epsilon^{ijk}r_j\epsilon^{klm}e\dot r_l\frac{g}{4\pi r^3}B_m=\frac{d}{dt}\left(\frac{egr^i}{4\pi r}\right).
+\end{align}
+This implies that a particle into the monopular field conservs another quantity that is the whole momentum
+\begin{equation}
+J^i=L^i-\frac{egr^i}{4\pi r}.
+\end{equation}
 \subsection{Witten Effect}
-
 \end{document}
