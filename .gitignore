@@ -1,6 +1,7 @@
 *fls
 *fdb_latexmk
 *pdf
+!main.pdf
 *log
 *out
 *aux
