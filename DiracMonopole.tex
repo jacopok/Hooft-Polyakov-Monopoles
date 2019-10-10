@@ -65,30 +65,34 @@ The electromagnetic duality transformation corresponds to the formal substitutio
 
 %A particular solution of the regular non-homogeneous Maxwell equations for $x^\mu \in \mathbb R \times (\mathbb{R}^3 \setminus \qty{0}$), \ie an electromagnetic field which satisfies \eqref{Maxwell} is the electric monopole, which represents a point-like electric charge $e$ fixed at the origin:
 %
-If we consider the configuration, where an electrically charged point-like particle lies in the origin, the electric and magnetic field have such form:
-\begin{gather}\label{ElectricMonopole}
+If we consider the configuration where an electrically charged point-like particle lies in the origin, the electric and magnetic field are:
+\begin{subequations}\label{ElectricMonopole}
+\begin{gather}
 E^i=\frac{e}{2r^2}x^i,\\
-B^i =0,\\
+B^i =0,
 \end{gather}
+\end{subequations}
 %
-which satisfies:
+and satisfy:
 %
 \begin{subequations}
 \begin{align}
 \partial_i E^i=2\pi e \delta^3(\vec r),\\
-e=\frac{1}{2\pi}\int_{S^2} E^i d S^i.
+e=\frac{1}{2\pi}\int_{S^2} E_i d S^i.
 \end{align}
 \end{subequations}
 %
-Now, we might apply a duality transformation to equation \eqref{ElectricMonopole} and obatin the configuration where a magnetic point-like monopole is placed in the origin and the fields have such form :
+Now, we might apply a duality transformation to this configuration and obtain a magnetic point-like monopole, which has charge $m$ and is placed in the origin. Now the fields are:
 %
+\begin{subequations}
 \begin{gather}
 \label{MagneticMonopole}
 B^i=\frac{m}{2r^2}x^i\\
 E^i=0,
 \end{gather}
+\end{subequations}
 %
-which corresponds to this electromagnetic tensor:
+and correspond to this electromagnetic tensor:
 \begin{equation}\label{eq:Fij}
 F_{ij}=\frac{m}{2r^3}\varepsilon_{ijk}x^k \qquad F_{i0}=0.
 \end{equation}
@@ -102,99 +106,101 @@ F=F_{ij}\dd{x^i}\dd{x^j}=\frac{m}{4r^3}\varepsilon_{ijk}x_k\dd{x^i}\dd{x^j}=\fra
 and deduce from it the value of the magnetic charge in the origin:
 %
 \begin{equation} \label{eq:MagnCharge}
-\int_{\mathbb R^3} \dd{F} = \int_{S^2} F=\frac{m}{2}\int_{S^2}\sin\theta \dd{\theta}\wedge \dd{\phi}=2\pi m .
+\int_{\mathbb R^3} \dd{F} = \int_{S^2_\infty} F=\frac{m}{2}\int_{S^2_\infty}\sin\theta \dd{\theta}\wedge \dd{\phi}=2\pi m .
 \end{equation}
 %
 In the first passage of equation \ref{eq:MagnCharge}, we applied Stokes' theorem to an arbitrarily large sphere, because the integrand function has no radial dependence.
 
 \subsection{Dirac Quantization for the Monopole}
-We can not find for this solution a global vector potential A such that $F=\dd{A}$: if it existed, we should have
+We cannot find for the magnetic monopole fields, represented by the 2-form $F$, a global vector potential $A$ such that $F=\dd{A}$.  If it existed, we would have the following paradox:
 
-\begin{equation}
-0\neq m=\int_{S^2}\frac{\dd{A}}{2\pi}=\int_{\partial S^2}\frac{A}{2\pi}=0\,,
+\begin{equation} \label{eq:different-potentials}
+ m= \int_{\mathbb R^3} \frac{\dd{F}}{2\pi} 
+= \int_{S^2_\infty} \frac{F}{2 \pi}
+ =\int_{S^2_\infty}\frac{\dd{A}}{2\pi}=\int_{\partial S^2_\infty}\frac{A}{2\pi}=0 \neq m\,,
 \end{equation}
 %
-which implies that we must define at least two charts for our manifold.
-The form \(F\) is closed: $\dd{F}=0$, but it is not exact; the manifold is not contractible, therefore Poincaré's lemma does not apply.
+%which implies that we must consider at least two charts for our manifold $\mathbb{R}^3\setminus \qty{0}$, and define a potential for each of them.
+Even though the form \(F\) is closed ($\dd{F}=0$), it is not exact. This happens beacause the manifold we are considering, is not contractible and therefore Poincaré 's lemma cannot be applied.
 
 %The second omothopy group for euclidean space is:
 
 %\begin{equation}
 %\Pi_2\left(\mathcal{R}-\bigl\{0\bigr\}\right)=\mathcal{Z}.
 %\end{equation}
-A possible choice of $A$ is, in cylindric coordinates,
+
+We can, however, find potentials which are defined \emph{locally}: a possible choice of $A$ is, in cylindric coordinates,
 
 \begin{equation}
 A=\frac{m}{2}\left(c-\cos\theta\right)\dd{\phi},
 \end{equation}
-where $c$ is a parameter that can be arbitrary set. Differentiating this equation we have
-
+where $c = \pm 1$. Differentiating this equation we have
+%
 \begin{equation}
-\dd{A}=\frac{m}{2}\left(c-\cos\theta\right)\dd^2\phi-\frac{m}{2}d\cos\theta\wedge d \phi=\frac{m}{2}\sin\theta \dd{\theta}\wedge \dd{\phi}\,,
+\dd{A}=\frac{m}{2}\left(c-\cos\theta\right)\dd^2\phi-\frac{m}{2}\dd{\cos\theta}\wedge \dd{\phi}=\frac{m}{2}\sin\theta \dd{\theta}\wedge \dd{\phi}\,,
 \end{equation}
 where the first term vanishes because \(\dd^2 = 0\).
-
-We will show that there are two evident choiches of $c$ which can produce singularities:
-
+%
+We will show that for both choices of $c$ the potential is singular somewhere:
+%
 \begin{itemize}
-\item For $c=1$ the potential \(A\) is singular along the \(z<0\) axis;
-\item For $c=-1$, instead, \(A\) is singular along the \(z>0\) axis.
+\item for $c=1$ the potential \(A\) is singular along the \(z<0\) axis;
+\item for $c=-1$, instead, \(A\) is singular along the \(z>0\) axis.
 \end{itemize}
-
+%
 The \(z \lessgtr 0\) ray is called a \emph{Dirac string}.
+%
+%
+%
+In both cases, we see that removing the string makes the topology trivial: the manifold becomes contractible, and the local potential is defined on the whole of either open set $\mathbb{R}^3\setminus \qty{z \lessgtr 0}$.
+%
+We call the two choices of $A$ respectively $A^+$ and $A^-$.
+We say that $U_+ = \mathbb{R}^3 \setminus \qty{z<0}$ is the chart where we defined $A^+$ and $U_- = \mathbb{R}^3 \setminus \qty{z>0}$ is the one where we defined $A^-$.
 
-Indeed, for every other choice of $c$ between these two values, $A$ presents singularities along a particular string, which is at the corresponding angle $\theta$.
-In all these cases we see that now topology is not trivial, and for this reason Poincarè theorem is no more valid.
-
-Following this reasoning, it holds that we should define the two aforementioned choices for $A$ as, respectivelly, $A^+$ and $A^-$. We say that $U_+$ is the chart where we defined $A_+$ and $U_-$ the one for $A_-$.
-
-We know from Stokes theorem that, for magnetic monopoles of eq.\eqref{MagneticMonopole}, taking a ball around the monopole itself,
-
+Let us now show that the potentials indeed diverge near their Dirac string. We wish to integrate in a similar domain to the one of equation \eqref{eq:different-potentials}, however now we must exclude the Dirac string: the resulting domain is a 2D surface, which we denote by $S_2 - D_\epsilon$; its boundary is a small circle $C_\epsilon$ around the Dirac string.
+%
 \begin{equation}\label{MagCharge}
-2\pi m=\int_{S_2} F=\lim_{\epsilon\to 0}\int_{S_2-D_{\varepsilon}}F=\lim_{\epsilon\to 0}\int \dd{A}=\lim_{\epsilon\to 0}\int_{C_{\varepsilon}} A,
+2\pi m=\int_{S_2} F=\lim_{\epsilon\to 0}\int_{S_2-D_{\varepsilon}}F=\lim_{\epsilon\to 0}\int_{S_2-D_{\varepsilon}} \dd{A}=\lim_{\epsilon\to 0}\int_{C_{\varepsilon}} A,
 \end{equation}
-which implies the divergence of $A$: its integral along an arbitrarily small circle is fixed and finite.
-Indeed
+which implies the divergence of $A$, since its integral along an arbitrarily small circle is requested to be fixed and finite.
 
+\medskip
+We now want to calculate the transiton function between the two potentials in the region where their domains overlap $U_+ \cap U_-$:
 \begin{equation}
-A^+-A^-=m\dd{\phi}=\dd{(m\phi)} \equiv \dd{\lambda(x)},
+A^+-A^-=m\dd{\phi}=\dd{(m\phi)} \equiv \dd{\lambda(x)}\,.
 \end{equation}
-%
-and for this reason we can see how $A$ behaves under a transformation of unitary group $U(1)$.
-Let $h$ be the transformation $h:U_+\cap U_- \to G=U(1)$, such that $x^i\to e^{ig\lambda(x)}$.
-The transformation of the potential under this is:
+
+This transformation can be seen as a $U(1)$ gauge transformation:
+let $h$ be the map $h:U_+\cap U_- \to G=U(1)$, such that $x\to \exp(\frac{ie\lambda(x)}{2\pi})$, where $e$ is the electric charge.
+The corresponding transformation of the potential is:
 %
 \begin{equation}
-A^+=A^-+\dd{\lambda}=h^{-1}A^-h-\frac{i}{g}h \dd{h},
+A^+=A^-+\dd{\lambda}=h^{-1}A^-h-\frac{i}{e}h \dd{h}\,.
 \end{equation}
-%
-which implies $mg\in \mathbb{Z}$. Again from \eqref{MagCharge} we have
+
+In order to have  the function $h$ well defined, we must have $h(m\phi) = h(m(\phi+ 2\pi))$.
+This condition is satisfied if we assume that: 
+\begin{equation}
+me \in 2\pi\mathbb{Z}.
+\label{eq:Dirac}
+\end{equation}
+Expression  \eqref{eq:Dirac} is the so-called \textit{Dirac Quantization Condition} and guarantees that: 
+\begin{equation}
+h(m(\phi + 2\pi)) =  \exp(2 \pi me)  h(m\phi) = h( m \phi) \,.
+\end{equation}
+We now want to show that the integer $em$ has a clear geometrical meaning: it is the winding number of the map $h$, i.e. the number of times $h$ wraps around the circle $S^1$ as $x$ goes around the center once.
+To prove this, we can split the integral in \eqref{MagCharge} into two contributions from both the potentials and integrate them over two hemispheres, whose borders can both be made to coincide with the equator $S^1$, but will have opposite orientations, whence the minus sign before $A_-$:
 
 \begin{equation}
 m=\int_{S^2}\frac{F}{2\pi}=\int_{S^2_+}\frac{\dd{A}^+}{2\pi}+\int_{S^2_-}\frac{\dd{A}^-}{2\pi}=\int_{S^1}\frac{A^+-A^-}{2\pi}=\int_{S^1}\frac{\dd{\lambda}}{2\pi}=\frac{\Delta\lambda}{2\pi},
 \end{equation}
-and the winding number is:
+%
+Multiplying $\Delta \lambda$ by the charge $e$, we can deduce how many radiants the argument of the exponent has elapsed. Therefore, the winding number is: 
+\begin{equation}
+S_1=\frac{e\Delta\lambda}{2\pi}=me \,.
+\end{equation}
 
-\begin{equation}
-S_1=\frac{g\Delta\lambda}{2\pi}=mg.
-\end{equation}
-\subsection{Zwanziger-Schwinger Quantization for the Dyon}
 
-Now we consider the 1-dimensional Schrödinger equation:
-
-\begin{equation}
-    -\frac{\hbar^2}{2m}\nabla^2\psi=i\hbar\frac{\partial\psi}{\partial t}
-\end{equation}
-Where we have $\nabla_i=\partial_i+\frac{ie A_i}{h}$. We want this equation to be invariant with respect to Gauge transformations, which means that we want it to be valid for any $A'_{\mu}=A_{\mu}+\partial_{\mu}\lambda$. This implies validity for any wavefunction
-\begin{equation}
-\ket{\psi'}=e^{\frac{ie\lambda}{\hbar c}}\ket{\psi}\,.
-\end{equation}
-Now, the minimal coupling for the action of this system is
-\begin{equation}
-S=S_0+\frac{e}{c}\int_{\gamma}A_{\mu}\frac{dx^{\mu}}{d\tau}d\tau.
-\end{equation}
-In this case it follows
-that for $\lambda=m\phi$ we obtain $em\in \mathbb{Z}$, which is Dirac quantisation condition. The Dirac monopole, in classical theory, represents the solution of a limit for a thin and long solenoid that lays along the $z<0$ axis. In quantum mechanics it can be proven (Aharanov-Bohm effect) that, although the field lines are kept into the solenoid, the topological effect of the presence of the solenoid in the space can influence the dynamics of the system, in such a way that in quantum mechanics Dirac monopole cannot be interpreted as the limit of this physical exemple.
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.3]{DiracMon.png}
@@ -202,8 +208,8 @@ that for $\lambda=m\phi$ we obtain $em\in \mathbb{Z}$, which is Dirac quantisati
 \label{fig-DirMon}
 \end{figure}
 
-\subsection{Angular momentum conservation}
-Let $L$ be now the orbital angular momentum of a rotating particle with mass $m$ and charge $e$. The particle experiments a variation of $L^i=\epsilon^{ijk}r_jm\dot r_k$, such that
+\subsection{Zwanziger-Schwinger Quantization for the Dyon}
+Let $L$ be the now orbital angular momentum of a dyon with mass $m$ and charge $e$. This particle experiments a variation of $L^i=\epsilon^{ijk}r_jm\dot r_k$, such that
 \begin{align}
 \dv{L^i}{t}=\epsilon^{ijk}r_jm\ddot r_k=\epsilon^{ijk}r_j\epsilon^{klm}e\dot r_lB_m=\epsilon^{ijk}r_j\epsilon^{klm}e\dot r_l\frac{g}{4\pi r^3}B_m=\dv{}{t}\left(\frac{egr^i}{4\pi r}\right).
 \end{align}
@@ -211,34 +217,47 @@ This implies that a particle into the monopular field conservs another quantity 
 \begin{equation}
 J^i=L^i-\frac{egr^i}{4\pi r}.
 \end{equation}
-\subsection{Witten Effect}
-Now we want to generalize quantization that are deduced from a generic gauge transformation about a direction $\vec\phi$. In this case we have that variations of a generic isovector $\vec v$ and vector potential $\vec A_\mu$ are
-\begin{subequations}
-\begin{align}
-&\delta\vec v=\frac{\vec\phi\times\vec v}{a}\\
-&\delta\vec A_\mu=-\frac{D_\mu\vec\phi}{ea},
-\end{align}
-\end{subequations}
+We define now a dyon as an hypothetic particle which has both electric and magnetic charge, respectivelly $e$ and $g$. Suppose now to have another dyon with charges $e'$ and $g'$, electric and magnetic. In this case we can hold a similar reasoning to obtain the equivalent condition on charges involved: since
+\begin{equation}
+\vec J_{em}=\int_{\mathbb{R}^3}\dd[3]{r}\vec r\times\left(\vec E\times\vec B\right),
+\end{equation}
+which is the angular momentum of fields generated by the particles involved, we can use the relation that holds quantization
+\begin{equation}
+\abs{\vec J_{em}}=\frac{n}{4\pi}
+\end{equation}
+where $n\in\mathbb{Z}$.
+From this it naturally follows:
+\begin{equation}
+\frac{q_1g_2-q_2g_1}{2\pi\hbar} \in \mathbb{Z}.
+\end{equation}
+% \subsection{Witten Effect}
+% Now we want to generalize quantization that are deduced from a generic gauge transformation about a direction $\vec\phi$. In this case we have that variations of a generic isovector $\vec v$ and vector potential $\vec A_\mu$ are
+% \begin{subequations}
+% \begin{align}
+% &\delta\vec v=\frac{\vec\phi\times\vec v}{a}\\
+% &\delta\vec A_\mu=-\frac{D_\mu\vec\phi}{ea},
+% \end{align}
+% \end{subequations}
 
-where we have the normalization constant $a$, the electric charge $e$ and where we defined the covariant derivative
-\begin{equation}
-D_\mu\vec\phi=\partial_\mu\vec\phi-e\vec A_\mu\times\vec\phi.
-\end{equation}
-Considering now the operator $e^{2\pi i N}$, where $N$ is the same operator with Higgs solution that will be defined in the next section. In the vacuum $D_\mu\vec\phi=0$ and at infinity in space we have that this operator is equal to identity. Using the variations defined above, we can obtain the Noether charge of the related transformations, which is for $\delta\vec\phi=0$
-\begin{equation}
-N=-\int_{\mathbb{R}^3}\frac{1}{ae}\frac{\partial\mathcal{L}}{\partial\partial_0\vec A_i}\cdot D_i\phi=\frac{q}{e},
-\end{equation}
-where we used the fact that the conjugated momentum of $\vec A_i$ is $-\vec E_i$.
-Instead, if we add a new term in the action
-\begin{equation}
-\mathcal{L}_\theta=\frac{e^2\theta}{64\pi^2}\epsilon^{\alpha\beta\mu\nu}\vec G_{\alpha\beta}\vec G_{\mu\nu},
-\end{equation}
-where $\vec G^{\alpha\beta}$ are the gauge field-strengths for $A$. In this case we have a modify of $N$ by a factor
-\begin{equation}
-\Delta N=-\frac{e\theta}{16\pi^2a}\int_{\mathbb{R}^3}\epsilon^{0i\alpha\beta}\vec G_{\alpha\beta}D_i\vec\phi=\frac{e\theta g}{8\pi^2},
-\end{equation}
-with the magnetic charge $g$. Rewriting this expression it follows, for $eg=-4\pi$ (the t' Hooft-Polyakov monopole result, which will be obtained later)\begin{equation}
-q=ne+\frac{e\theta}{2\pi},
-\end{equation}
-with $n\in\mathbb{Z}$. This is the generalization to have consistency with quantization condition, a result by Edward Witten \cite{Witten}.
+% where we have the normalization constant $a$, the electric charge $e$ and where we defined the covariant derivative
+% \begin{equation}
+% D_\mu\vec\phi=\partial_\mu\vec\phi-e\vec A_\mu\times\vec\phi.
+% \end{equation}
+% Considering now the operator $e^{2\pi i N}$, where $N$ is the same operator with Higgs solution that will be defined in the next section. In the vacuum $D_\mu\vec\phi=0$ and at infinity in space we have that this operator is equal to identity. Using the variations defined above, we can obtain the Noether charge of the related transformations, which is for $\delta\vec\phi=0$
+% \begin{equation}
+% N=-\int_{\mathbb{R}^3}\frac{1}{ae}\frac{\partial\mathcal{L}}{\partial\partial_0\vec A_i}\cdot D_i\phi=\frac{q}{e},
+% \end{equation}
+% where we used the fact that the conjugated momentum of $\vec A_i$ is $-\vec E_i$.
+% Instead, if we add a new term in the action
+% \begin{equation}
+% \mathcal{L}_\theta=\frac{e^2\theta}{64\pi^2}\epsilon^{\alpha\beta\mu\nu}\vec G_{\alpha\beta}\vec G_{\mu\nu},
+% \end{equation}
+% where $\vec G^{\alpha\beta}$ are the gauge field-strengths for $A$. In this case we have a modify of $N$ by a factor
+% \begin{equation}
+% \Delta N=-\frac{e\theta}{16\pi^2a}\int_{\mathbb{R}^3}\epsilon^{0i\alpha\beta}\vec G_{\alpha\beta}D_i\vec\phi=\frac{e\theta g}{8\pi^2},
+% \end{equation}
+% with the magnetic charge $g$. Rewriting this expression it follows, for $eg=-4\pi$ (the t' Hooft-Polyakov monopole result, which will be obtained later)\begin{equation}
+% q=ne+\frac{e\theta}{2\pi},
+% \end{equation}
+% with $n\in\mathbb{Z}$. This is the generalization to have consistency with quantization condition, a result by Edward Witten \cite{Witten}.
 \end{document}
