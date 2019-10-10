@@ -20,5 +20,55 @@ Some notable cases are: \(\Pi_n (S^m) = 0 \) for \(n<m\) and \(\Pi_n (S^n) = (\m
 
 
 \section{Differential forms and Poincaré's lemma} \label{sec:differential-forms}
+In this appendix we present a brief overview of differential forms, following \cite{Lechner}.
+
+Differential forms are a useful tool when working with completely antisymmetric tensors:
+in a space of dimension \(d\) one can define tensors of any rank \(n\), but if we restrict ourselves to the antisymmetric ones, which satisfy:
+%
+\begin{equation}
+  F_{\mu_1 \mu_2 \dots \mu_{n}} 
+ = F_{[\mu_1 \mu_2 \dots \mu_{n}]}
+\end{equation}
+%
+we can see that they only have \(\dbinom{d}{n}\) independent components: they can be nontrivial only if \(n \leq d\).  
+
+The differential form associated with the tensor \(F_{\mu_1 \dots \mu_{n}}\) is defined as:
+
+\begin{equation}
+  F = \frac{1}{n!} F_{\mu_1 \dots \mu_{n}} \dd{x^{\mu_1}} \wedge \dots \wedge \dd{x^{\mu_n}}\,,
+\end{equation}
+%
+where \(\dd{x^{\mu_1}} \wedge \dots \wedge \dd{x^{\mu_n}}\) is the canonical basis of the exterior algebra \(\bigwedge^n (V)\), where \(V\) is the vector space over which the tensors are constructed.
+This basis is antisymmetric: \(\dd{x^{\mu_1}} \wedge \dots \wedge \dd{x^{\mu_n}} = \dd{x^{[\mu_1}} \wedge \dots \wedge \dd{x^{\mu_n]}}\).
+
+The wedge product is an antisymmetrized tensor product: it maps a \(p\)-form \(A\) and a \(q\)-form \(B\) to a \((p+q)\)-form \(A \wedge B\), defined by:
+\begin{equation}
+  A \wedge B = \frac{1}{p!q!} 
+  A_{[\mu_1 \dots \mu_{p}} B_{\nu_1 \dots \nu_{q}]}
+  \dd{x^{\mu_1}} \wedge \dots \wedge \dd{x^{\mu_p}} \wedge
+  \dd{x^{\nu_1}} \wedge \dots \wedge \dd{x^{\nu_q}}\,.
+\end{equation}
+
+It is \emph{graded} antisymmetric: \(A \wedge B = (-)^{pq} B \wedge A\).
+
+The number of independent components tells us that \(n\)-forms and \(d-n\)-forms have the same number of independent components: it is natural to find a connection between them. This is realized by \emph{Hodge duality}: an \(n\)-form \(F\) is mapped to the \((d-n)\)-form \(*F\), defined by:
+\begin{equation}
+  *F = 
+  \frac{1}{n!(d-n)!} \varepsilon_{\mu_1 \dots \mu d} F^{\mu_1 \dots \mu_n} \dd{x^{\mu_{n+1}}} \wedge \dots \wedge \dd{x^{\mu_{d}}}\,.
+\end{equation}
+
+The exterior differential maps an \(n\)-form \(F\) to an \((n+1)\)-form \(\dd{F}\) as such:
+consider the derivative operator \(\partial \equiv \dd{x^{\mu}} \partial _\mu\).
+Then, \(\dd{F} \equiv \partial \wedge F\).
+
+The functions usually considered are sufficiently regular, therefore by Schwarz's theorem \(\dd^2 = 0\).
+
+An \(n\)-form \(F\) can is called \emph{closed} if \(\dd{F}= 0 \) and \emph{exact} if there exists an \((n-1)\)-form \(A\) such that \(F = \dd{A}\).
+By \(\dd^2=0\) we have that exact implies closed, while the inverse is not generally true.
+
+A \emph{contractible} subset of a topological space is one which can be continuously deformed to a point.
+\emph{Poincaré's lemma} states that, if a form is defined on a contractible set and it is closed, then it is also exact.
+
+The non-contractibiliy of spaces is caused by topological nontriviality: the quotient of the closed \(n\)-forms modulo the exact \(n\)-forms characterizes this and is called the \(n\)-th de Rham cohomology group.
 
 \end{document}
