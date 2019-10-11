@@ -41,3 +41,13 @@
 \numberwithin{equation}{section}
 
 \usepackage[activate={true,nocompatibility},final,tracking=true,kerning=true,factor=1100,stretch=10,shrink=10]{microtype}
+
+\usepackage{soul}
+
+\usepackage{marginnote}
+\newcommand{\todoleft}[2][]{{%
+ \let\marginpar\marginnote
+ \reversemarginpar
+ \renewcommand{\baselinestretch}{0.8}%
+ \todo[#1]{#2}}}
+\newcommand{\note}[2][]{\renewcommand{\baselinestretch}{0.8}\todo[#1]{#2}}
