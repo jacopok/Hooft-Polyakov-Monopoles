@@ -83,9 +83,9 @@ In the 't Hooft-Polyakov case, this simplifies to \(E \geq a \abs{g} \).
 
 \subsubsection{Saturation of the Bogomol'nyi Bound}
 
-A state which attains the lower bound is called a Bogomol'nyi–Prasad–Sommerfield --- for short BPS --- monopole.
+A state which attains the lower bound is called a Bogomol'nyi – Prasad – Sommerfield --- for short BPS --- state.
 
-To derive the bound we discarded in the expression of the energy integrals of always-positive quantities, so to reach the bound they must be assumed to vanish everywhere. In addition, we assume our solution to be static. This yields the conditions:
+To derive the bound we discarded in the expression of the energy integrals of always-positive quantities, so to reach the bound they must be assumed to vanish everywhere. In addition, we assume our solution to be static: this implies that electric charge will be zero. This yields the conditions:
 %
 \begin{subequations}
 \begin{align}
@@ -97,9 +97,9 @@ To derive the bound we discarded in the expression of the energy integrals of al
 \end{subequations}
 
 Now, we make an interesting observation: if \(\lambda \neq 0\) in condition \eqref{eq:potential-condition} we must have that \(\phi^a \phi^a = a^2\) everywhere: therefore \(D_i (\phi^a \phi^a) = 2 \phi^a D_i \phi^a = 0\), and an analogous equation holds with \(D_i \rightarrow \partial_i\).
-However, we also have equation \eqref{eq:bogomolnyi-condition}: using it we can also derive \(\phi^a D_i \phi^a \propto \phi^a B_i^a = 0\).
+However, we also have equation \eqref{eq:bogomolnyi-condition}: using it we can also derive \(\phi^a D_i \phi^a \propto \phi^a B_i^a = 0\): the solution' magnetic field along \(\phi \) is trivial.
 
-If we insert the 't Hooft-Polyakov \emph{ansatz} in the Bogomol'nyi condition \eqref{eq:bogomolnyi-condition} we get the following set of differential equations:
+If we wish to study this saturation despite this issue, we can insert the 't Hooft-Polyakov \emph{ansatz} in the Bogomol'nyi condition \eqref{eq:bogomolnyi-condition} we get the following set of differential equations:
 %
 \begin{subequations}
 \begin{align}
@@ -110,6 +110,24 @@ If we insert the 't Hooft-Polyakov \emph{ansatz} in the Bogomol'nyi condition \e
 
 these can be solved analytically, when coupled to the regular monopole equations of motion.
 
-\todo{Add computations to show that the energy density of the monopole is finite at the origin.}
+% \todo{Add computations to show that the energy density of the monopole is finite at the origin.}
+
+\subsubsection{Numerical estimation}
+
+We wish to give numerical values to our estimates of monopole masses.
+We start from the 't Hooft-Polyakov monopole: from the Bogomol'nyi bound \(E \geq a \abs{g} \), while from the quantization condition we have that the least value \(g\) can attain is \(4 \pi / e\), where \(e\) is the elementary electric charge. 
+
+In (Lorentz-Heaviside) natural units, we can express the vacuum expectation value of the Higgs field as \(a = M_W / e \), where \(M_W\) is the mass of the \(W\) boson. 
+
+Thereforewe have \(E \geq 4 \pi a / e  = 4 \pi M_W / e^2 = M_W / \alpha \). 
+
+Since \(M_W\) has been experimentally found to be around \SI{90}{GeV}, this means that \(E \gtrsim \SI{12}{TeV}\).
+
+Some numerical simulations by Julia and Zee \cite[]{Julia:Dyon} for equations \ref{eq:thooft-polyakov-equations}  have shown that numerical solutions to the monopole differential equations exist close to this bound, at \(E = 1.18 M_W / \alpha \).
+
+They also simulated dyons according to equations \eqref{eq:dyon-equations}: they found \(E \approx  1.25 M_W/ \alpha \) for \(Q \approx 44 e\) and \(E \approx 1.85 M_W / \alpha \) for \(Q \approx  169 e\).
+
+This shows that, even while relaxing the condition of trivial potential one can get rather close to the BPS bound for the monopole mass.
+For dyons we still have the BPS bound but the reasoning from before cannot be applied since we do not have the quantization condition which was derived only for monopoles.
 
 \end{document}
