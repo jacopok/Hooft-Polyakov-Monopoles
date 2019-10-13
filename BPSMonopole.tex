@@ -3,14 +3,15 @@
 
 \subsection{The Monopole Mass}
 
-We wish to estimate the mass (or, equivalently, energy) of the 't Hooft-Polyakov monopole: in general, the mass of a dyon \todo{Shouldn't it be a monopole?} is given by the integral
+We wish to estimate the mass (or, equivalently, energy) of the 't Hooft-Polyakov monopole: we can actually derive a more general bound for a dyon, and then get the monopole case by setting the electric charge to be equal to zero.
+The energy of a dyon is generically given by the integral
 %
 \begin{equation} \label{eq:monopole-mass}
   E = \int_{\mathbb{R}^3}
   \frac{1}{2} \qty(E_i^a E_i^a + B_i^a B_i^a + D_\mu \phi^a D_\mu \phi^a) + V(\phi)\,.
 \end{equation}
 %
-where \(G_{0i}^a = E_i^a\) and \(G_{ij}^a = B_i^a\)\todo{Definizioni sbagliate!}.
+where \(G_{0i}^a = E_i^a\) and \(G_{ij}^a = \varepsilon _{ijk} B_k^a\).
 
 Now, we will derive a lower bound for this mass. Then, we will explicitly show that this bound can be reached by a specific solution: the BPS monopole.
 
@@ -32,13 +33,13 @@ and then we make them into squares, which we can discard while still maintaining
 \begin{equation}
 \begin{split}
     E \geq  \frac{1}{2} \int_{\mathbb R^3}
-    &\qty(E_i^a E_i^a - 2 E_i^a D_i\phi^a \sin\theta + D_i\phi^a D_i\phi^a \sin^2\theta) + \\
-    + &\qty( B_i^a B_i^a - 2 B_i^a D_i\phi^a \cos\theta + D_i\phi^a D_i\phi^a \cos^2\theta) +  \\
+    &\overbrace{\qty(E_i^a E_i^a - 2 E_i^a D_i\phi^a \sin\theta + D_i\phi^a D_i\phi^a \sin^2\theta)}^{(E_i^a - D_i\phi^a \sin\theta)^2} + \\
+    + &\overbrace{\qty( B_i^a B_i^a - 2 B_i^a D_i\phi^a \cos\theta + D_i\phi^a D_i\phi^a \cos^2\theta)}^{(B_i^a - D_i\phi^a \cos\theta)^2} +  \\
     +&2 E_i^a D_i \phi^a \sin \theta+2 B_i^a D_i \phi^a \cos \theta \,.
 \end{split}
-\end{equation}\todo{usare il comando overbrace per scrivere i quadrati in modo esplicito}
+\end{equation}
 
-The terms in parentheses are positive, therefore the monopole mass is just bounded by:
+The squares are positive definite, therefore the monopole mass is just bounded by:
 %
 \begin{equation}
   E \geq \int_{\mathbb R^3}
@@ -46,7 +47,7 @@ The terms in parentheses are positive, therefore the monopole mass is just bound
 \end{equation}
 %
 for \emph{any} \(\theta\).
-Now, we use the following facts: by the Bianchi identities \(D_\mu \,^* G^{\mu\nu, a} = 0\) we have \(D_i B^a_i = 0\), therefore \(B_i^a D_i \phi^a = D_i(B_i^a \phi^a)\) \todo{formula incomprensibile, abbiamo provato noi a mettere l'uguale}.
+Now, we use the following facts: by the Bianchi identities \(D_\mu \,^* G^{\mu\nu, a} = 0\) we have \(D_i B^a_i = 0\), therefore \(B_i^a D_i \phi^a = D_i(B_i^a \phi^a)\).
 Also, the equations of motion read \(D_\nu G^{\mu\nu, a} = e \varepsilon_{abc} \phi^c D^\mu \phi^b\), and \(D_i G_{0i, a} = D_i E_i^a\).  Therefore:
 %
 \begin{equation}
@@ -70,7 +71,7 @@ and apply Stokes' theorem:
   \phi^a \qty(E_i^a  \sin \theta+ B_i^a   \cos \theta ) \dd{S_i}\,.
 \end{equation}
 
-Now, by the boundary conditions on \(\phi\) it will be radially outward \todo{Ti chiediamo, per nostra mancanza, che significa radially outward} and with absolute value \(a\) at infinity: therefore its product with the electric and magnetic fields (which are also radial at infinity) reduces to
+Now, by the boundary conditions on \(\phi\) it will be radially outward and with absolute value \(a\) at infinity: therefore its product with the electric and magnetic fields (which are also radial at infinity) reduces to
 %
 \begin{equation}
   E \geq a (q\sin \theta + g \cos \theta)\,,
@@ -88,7 +89,7 @@ In the 't Hooft-Polyakov monopole case, this simplifies to \(E \geq a \abs{g} \)
 
 A state which attains the lower bound is called a Bogomol'nyi – Prasad – Sommerfield --- for short BPS --- state.
 
-To derive the bound we discarded always-positive quantities in the expression of the energy integrals; hence, in order to reach the bound they must be assumed to vanish everywhere. In addition, we assume our solution to be static: this implies that electric charge will be zero. This yields the conditions:
+In our derivation we discarded always-positive quantities in the expression of the energy integrals; hence, in order to saturate the bound, they must be assumed to vanish everywhere. In addition, we assume our solution to be static: this implies that electric charge will be zero. This yields the conditions:
 %
 \begin{subequations}
 \begin{align}
@@ -100,7 +101,7 @@ To derive the bound we discarded always-positive quantities in the expression of
 \end{subequations}
 
 Now, we make an interesting observation: if \(\lambda \neq 0\) in condition \eqref{eq:potential-condition} we must have that \(\phi^a \phi^a = a^2\) everywhere: therefore \(D_i (\phi^a \phi^a) = 2 \phi^a D_i \phi^a = 0\), and an analogous equation holds with \(D_i \rightarrow \partial_i\).
-However, we also have equation \eqref{eq:bogomolnyi-condition}: using it we can also derive \(\phi^a D_i \phi^a \propto \phi^a B_i^a = 0\): the solution' magnetic field along \(\phi \) is trivial.
+However, we also have equation \eqref{eq:bogomolnyi-condition}: using it, we can also derive \(\phi^a D_i \phi^a \propto \phi^a B_i^a = 0\): the solution's magnetic field along \(\phi \) is trivial. 
 Therefore, in order to saturate the bound for a nontrivial solution we must assume \(\lambda = 0\).
 
 If we wish to study this saturation despite this issue, we can insert the 't Hooft-Polyakov \emph{ansatz} in the Bogomol'nyi condition \eqref{eq:bogomolnyi-condition} we get the following set of differential equations:
@@ -112,26 +113,25 @@ If we wish to study this saturation despite this issue, we can insert the 't Hoo
 \end{align}
 \end{subequations}
 
-these can be solved analytically, when coupled to the regular monopole equations of motion.
-
-% \todo{Add computations to show that the energy density of the monopole is finite at the origin.}
+these can be solved analytically, when coupled to the regular monopole equations of motion: one gets $H(\xi) = \xi \coth(\xi) -1$ and $K(\xi) = \xi \sech(\xi)$.
 
 \subsubsection{Numerical estimation}
 
 We wish to give numerical values to our estimates of monopole masses.
-We start from the 't Hooft-Polyakov monopole: from the Bogomol'nyi bound \(E \geq a \abs{g} \), while from the quantization condition we have that the least value \(g\) can attain is \(4 \pi / e\), where \(e\) is the elementary electric charge. 
+We start from the 't Hooft-Polyakov monopole: from the Bogomol'nyi bound it follows that \(E \geq a \abs{g} \), while from the quantization condition we have that the least value \(g\), we can attain is \(4 \pi / e\), where \(e\) is the elementary electric charge. 
 
-In (Lorentz-Heaviside) natural units, we can express the vacuum expectation value of the Higgs field as \(a = M_W / e \), where \(M_W\) is the mass of the \(W\) boson. 
+In (Lorentz-Heaviside) natural units, we can express the vacuum expectation value of the Higgs field as \(a = M_W / e \), where \(M_W\) is the mass of either \(W\) boson.
 
-Thereforewe have \(E \geq 4 \pi a / e  = 4 \pi M_W / e^2 = M_W / \alpha \). 
+Therefore we have \(E \geq 4 \pi a / e  = 4 \pi M_W / e^2 = M_W / \alpha \). 
 
-Since \(M_W\) has been experimentally found to be around \SI{90}{GeV}, this means that \(E \gtrsim \SI{12}{TeV}\).
+Since \(M_W\) has been experimentally measured to be around \SI{90}{GeV}, this means that \(E \gtrsim \SI{12}{TeV}\).
 
 Some numerical simulations by Julia and Zee \cite{Julia:Dyon} for equations \eqref{eq:thooft-polyakov-equations}  have shown that numerical solutions to the monopole differential equations exist close to this bound, at \(E = 1.18 M_W / \alpha \).
 
-They also simulated dyons according to equations \eqref{eq:dyon-equations}: they found \(E \approx  1.25 M_W/ \alpha \) for a dyon electric charge of \(Q \approx 44 e\) and \(E \approx 1.85 M_W / \alpha \) for \(Q \approx  169 e\).
+They also made similar simulations for dyons according to equations \eqref{eq:dyon-equations}: they found \(E \approx  1.25 M_W/ \alpha \) for a dyon electric charge of \(Q \approx 44 e\) and \(E \approx 1.85 M_W / \alpha \) for \(Q \approx  169 e\).
 
-This shows that, even while relaxing the condition of trivial potential one can get rather close to the BPS bound for the monopole mass.
-For dyons we still have the BPS bound but the reasoning from before cannot be applied since we do not have the quantization condition which was derived only for monopoles.
+This shows that, even while relaxing the condition of trivial potential $V(\phi)$ ($\lambda =0$) one can get rather close to the BPS bound for the monopole mass.
+For dyons we still have the BPS bound but the reasoning from before cannot be directly applied since we do not have a quantization condition for the electric charge as we do for the magnetic one.
+% \todo{C'è una quantizzazione della carica magnetica, manca quella della  carica elettrica. Forse si riescono cmq a riprodurre i conti anche per il dione di Julia-Zee}
 
 \end{document}
