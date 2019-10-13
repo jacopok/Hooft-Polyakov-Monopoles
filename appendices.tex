@@ -1,6 +1,7 @@
 \documentclass[main.tex]{subfiles}
 \begin{document}
 
+\clearpage
 \appendix
 
 \section{Differential forms and Poincaré's lemma} \label{sec:differential-forms}
@@ -58,9 +59,13 @@ The non-contractibiliy of spaces is caused by topological nontriviality: the quo
 
 \section{Homotopy} \label{sec:homotopy}
 
-If we have a topological space \(X\), the set of all maps \(f\) from \([0,1]^n\) such that  \(f(\vec{0}) = f(\vec{1} )=x_0 \in X\) considered modulo homotopy and with the operation of composition is called the \(n\)-th homotopy group \(\Pi_n (X; x_0)\). The dependence on \(x_0\) is actually trivial, it only matters to which connected component of \(X\) the element \(x_0\) belongs.
+Given two topological spaces \(X\) and \(Y\) and two functions \(f, g \colon X \rightarrow Y\), the functions are said to be \emph{homotopic} if there exists a continuous deformation \(H \colon X \times [0,1] \rightarrow Y\) such that for any \(x \in X\) we have \(H(x, 0) = f(x)\) while \(H(x, 1) = g(x)\).
 
-Composition is to be considered as such:
+Now, consider a topological space \(X\).
+The set of all maps \(f\) from the \(n\)-cube \([0,1]^n \rightarrow X\) such that  \(f(t) = x_0 \in X\) if \(t\) is on the boundary of the \(n\)-cube \([0,1]^{n}\), considered modulo homotopy and with the operation of composition is called the \(n\)-th homotopy group \(\Pi_n (X; x_0)\).
+The dependence on \(x_0\) is actually trivial: it only matters to which connected component of \(X\) the element \(x_0\) belongs. If the space is arcwise connected, there is no dependence on \(x_0 \) whatsoever.
+
+The composition of two maps \(f\) and \(g\) is defined as:
 
 \begin{equation}
   (f+g) (\vec{x} ) = \begin{cases}
@@ -69,5 +74,8 @@ Composition is to be considered as such:
   \end{cases}
 \end{equation}
 
-Some notable cases are: \(\Pi_n (S^m) = 0 \) for \(n<m\) and \(\Pi_n (S^n) = (\mathbb Z, +)\).
+The first homotopy classifies loops: for example, for a torus \(\Pi_{1} (\mathbb{T}) = \mathbb{Z}^2\) since we have two independent non-homotopic  ways of going around it, and we can go around the torus any amount of times along either.
+
+Some notable cases for higher homotopy groups are: \(\Pi_n (S^m) = 0 \) for \(n<m\) and \(\Pi_n (S^n) = (\mathbb Z, +)\).
+
 \end{document}

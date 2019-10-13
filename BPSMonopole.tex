@@ -98,6 +98,7 @@ To derive the bound we discarded in the expression of the energy integrals of al
 
 Now, we make an interesting observation: if \(\lambda \neq 0\) in condition \eqref{eq:potential-condition} we must have that \(\phi^a \phi^a = a^2\) everywhere: therefore \(D_i (\phi^a \phi^a) = 2 \phi^a D_i \phi^a = 0\), and an analogous equation holds with \(D_i \rightarrow \partial_i\).
 However, we also have equation \eqref{eq:bogomolnyi-condition}: using it we can also derive \(\phi^a D_i \phi^a \propto \phi^a B_i^a = 0\): the solution' magnetic field along \(\phi \) is trivial.
+Therefore, in order to saturate the bound for a nontrivial solution we must assume \(\lambda = 0\).
 
 If we wish to study this saturation despite this issue, we can insert the 't Hooft-Polyakov \emph{ansatz} in the Bogomol'nyi condition \eqref{eq:bogomolnyi-condition} we get the following set of differential equations:
 %
@@ -123,9 +124,9 @@ Thereforewe have \(E \geq 4 \pi a / e  = 4 \pi M_W / e^2 = M_W / \alpha \).
 
 Since \(M_W\) has been experimentally found to be around \SI{90}{GeV}, this means that \(E \gtrsim \SI{12}{TeV}\).
 
-Some numerical simulations by Julia and Zee \cite[]{Julia:Dyon} for equations \ref{eq:thooft-polyakov-equations}  have shown that numerical solutions to the monopole differential equations exist close to this bound, at \(E = 1.18 M_W / \alpha \).
+Some numerical simulations by Julia and Zee \cite{Julia:Dyon} for equations \eqref{eq:thooft-polyakov-equations}  have shown that numerical solutions to the monopole differential equations exist close to this bound, at \(E = 1.18 M_W / \alpha \).
 
-They also simulated dyons according to equations \eqref{eq:dyon-equations}: they found \(E \approx  1.25 M_W/ \alpha \) for \(Q \approx 44 e\) and \(E \approx 1.85 M_W / \alpha \) for \(Q \approx  169 e\).
+They also simulated dyons according to equations \eqref{eq:dyon-equations}: they found \(E \approx  1.25 M_W/ \alpha \) for a dyon electric charge of \(Q \approx 44 e\) and \(E \approx 1.85 M_W / \alpha \) for \(Q \approx  169 e\).
 
 This shows that, even while relaxing the condition of trivial potential one can get rather close to the BPS bound for the monopole mass.
 For dyons we still have the BPS bound but the reasoning from before cannot be applied since we do not have the quantization condition which was derived only for monopoles.
