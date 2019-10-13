@@ -3,14 +3,14 @@
 
 \subsection{The Monopole Mass}
 
-We wish to estimate the mass (or, equivalently, energy) of the 't Hooft-Polyakov monopole: in general, the mass of a dyon is given by the integral
+We wish to estimate the mass (or, equivalently, energy) of the 't Hooft-Polyakov monopole: in general, the mass of a dyon \todo{Shouldn't it be a monopole?} is given by the integral
 %
 \begin{equation} \label{eq:monopole-mass}
   E = \int_{\mathbb{R}^3}
   \frac{1}{2} \qty(E_i^a E_i^a + B_i^a B_i^a + D_\mu \phi^a D_\mu \phi^a) + V(\phi)\,.
 \end{equation}
 %
-where \(G_{0i}^a = E_i^a\) and \(G_{ij}^a = B_i^a\).
+where \(G_{0i}^a = E_i^a\) and \(G_{ij}^a = B_i^a\)\todo{Definizioni sbagliate!}.
 
 Now, we will derive a lower bound for this mass. Then, we will explicitly show that this bound can be reached by a specific solution: the BPS monopole.
 
@@ -36,9 +36,9 @@ and then we make them into squares, which we can discard while still maintaining
     + &\qty( B_i^a B_i^a - 2 B_i^a D_i\phi^a \cos\theta + D_i\phi^a D_i\phi^a \cos^2\theta) +  \\
     +&2 E_i^a D_i \phi^a \sin \theta+2 B_i^a D_i \phi^a \cos \theta \,.
 \end{split}
-\end{equation}
+\end{equation}\todo{usare il comando overbrace per scrivere i quadrati in modo esplicito}
 
-The terms in parentheses are positive, therefore this is just bounded by:
+The terms in parentheses are positive, therefore the monopole mass is just bounded by:
 %
 \begin{equation}
   E \geq \int_{\mathbb R^3}
@@ -46,8 +46,8 @@ The terms in parentheses are positive, therefore this is just bounded by:
 \end{equation}
 %
 for \emph{any} \(\theta\).
-Now, we use the following facts: by the Bianchi identities \(D_\mu \,^* G^{\mu\nu, a} = 0\) we have \(D_i B^a_i = 0\), therefore \(B_i^a D_i \phi^a  D_i(B_i^a \phi^a)\).
-Also, the equations of motion read \(D_\nu G^{\mu\nu, a} = e \varepsilon_{abc} \phi^c D^\mu \phi^b\). Also, \(D_i G_{0i, a} = D_i E_i^a\).  Therefore:
+Now, we use the following facts: by the Bianchi identities \(D_\mu \,^* G^{\mu\nu, a} = 0\) we have \(D_i B^a_i = 0\), therefore \(B_i^a D_i \phi^a = D_i(B_i^a \phi^a)\) \todo{formula incomprensibile, abbiamo provato noi a mettere l'uguale}.
+Also, the equations of motion read \(D_\nu G^{\mu\nu, a} = e \varepsilon_{abc} \phi^c D^\mu \phi^b\), and \(D_i G_{0i, a} = D_i E_i^a\).  Therefore:
 %
 \begin{equation}
   D_i \phi^a E_i^a
@@ -55,7 +55,7 @@ Also, the equations of motion read \(D_\nu G^{\mu\nu, a} = e \varepsilon_{abc} \
   = D_i (\phi ^a E_i^a) - \phi^a e \varepsilon_{abc} \phi^c D^\mu \phi^b
   = D_i (\phi ^a E_i^a)\,.
 \end{equation}
-
+\
 With these two facts we can frame all of the integrand as a divergence:
 %
 \begin{equation}
@@ -70,22 +70,25 @@ and apply Stokes' theorem:
   \phi^a \qty(E_i^a  \sin \theta+ B_i^a   \cos \theta ) \dd{S_i}\,.
 \end{equation}
 
-Now, by the boundary conditions on \(\phi\) it will be radially outward and with absolute value \(a\) at infinity: therefore its product with the electric and magnetic fields (which are also radial at infinity) reduces to
+Now, by the boundary conditions on \(\phi\) it will be radially outward \todo{Ti chiediamo, per nostra mancanza, che significa radially outward} and with absolute value \(a\) at infinity: therefore its product with the electric and magnetic fields (which are also radial at infinity) reduces to
 %
 \begin{equation}
   E \geq a (q\sin \theta + g \cos \theta)\,,
 \end{equation}
 %
 where \(q\) and \(g\) are the electric and magnetic charges.
-The sharpest bound occurs when the \((q, g)\) and \((\sin \theta, \cos \theta)\)  2D vectors are aligned, and corresponds to their euclidean scalar product: the final bound we get is thus found by the saturation of the Cauchy-Shwarz inequality: \(E \geq a \sqrt{q^2 + g^2} \).
+The sharpest bound occurs when the \((q, g)\) and \((\sin \theta, \cos \theta)\)  2D vectors are aligned, and corresponds to their euclidean scalar product: the final bound we get is thus found by the saturation of the Cauchy-Shwarz inequality: 
+\begin{equation}
+E \geq a \sqrt{q^2 + g^2} .
+\end{equation}
 
-In the 't Hooft-Polyakov case, this simplifies to \(E \geq a \abs{g} \).
+In the 't Hooft-Polyakov monopole case, this simplifies to \(E \geq a \abs{g} \).
 
 \subsubsection{Saturation of the Bogomol'nyi Bound}
 
 A state which attains the lower bound is called a Bogomol'nyi – Prasad – Sommerfield --- for short BPS --- state.
 
-To derive the bound we discarded in the expression of the energy integrals of always-positive quantities, so to reach the bound they must be assumed to vanish everywhere. In addition, we assume our solution to be static: this implies that electric charge will be zero. This yields the conditions:
+To derive the bound we discarded always-positive quantities in the expression of the energy integrals; hence, in order to reach the bound they must be assumed to vanish everywhere. In addition, we assume our solution to be static: this implies that electric charge will be zero. This yields the conditions:
 %
 \begin{subequations}
 \begin{align}
