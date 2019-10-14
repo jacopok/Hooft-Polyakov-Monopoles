@@ -3,8 +3,8 @@
 
 
 \section{Dirac Monopoles}\label{sect:Dirac}
-In 1931 Dirac showed that postulating the existence of a magnetic charge, we can provide a theoretical explanation for the quantisation of the electric charge \cite{Dirac}. 
-In this section we will recover the basic ideas exposed in Dirac's paper and show how they were generalised to a particle with both charges, called \textit{dyon}, by Schwinger in 1966 \cite{S:dyon} and Zwanziger in 1968 \cite{Z:dyon}.
+In 1931 Dirac showed that postulating the existence of a magnetic charge, we can provide a theoretical explanation for the quantization of the electric charge \cite{Dirac}. 
+In this section we will recover the basic ideas exposed in Dirac's paper and show how they were generalised to a particle with both charges, called \emph{dyon}, by Schwinger in 1966 \cite{S:dyon} and Zwanziger in 1968 \cite{Z:dyon}.
 
 %To date no experiment has shown the existence of magnetic monopoles, but classical electromagnetic theory admits their existence in its gauge formulation \cite{Dirac}.
 %This follows naturally from Maxwell equations' duality: monopoles are interesting solutions in a space with nontrivial topology, since from topological arguments one can derive the quantization of magnetic and electric charge.
@@ -23,22 +23,22 @@ is an antisymmetric tensor and can be written as a 2-form (see appendix \ref{sec
 F = \frac{1}{2} F_{\mu\nu}\dd{x^\mu} \wedge \dd{x^\nu}
 \end{equation}
 %
-The tensor $F^{\mu \nu}$ obeys Maxwell's equations:
+It obeys Maxwell's equations:
 %
 \begin{subequations} \label{Maxwell}
 \begin{align}
 \partial_{\mu}F^{\mu \nu}&= j^\nu \label{maxwell-nonhom} \\
-\partial_{[\mu} F_{\nu\rho]} &=0 \label{maxwell-hom} \,.
+\partial_{[\mu} F_{\nu\rho]} &=0 \label{maxwell-hom} \,,
 \end{align}
 \end{subequations}
-The duality operation (see appendix \ref{sec:differential-forms}) acts on the electromagnetic tensor as follows: 
+We can define a dual electromagnetic tensor (see appendix \ref{sec:differential-forms}) by \emph{Hodge duality}: 
 \begin{equation}
 \tilde{F}^{\mu\nu}=*F^{\mu\nu}=-\frac{1}{2}\varepsilon^{\mu \nu \rho \sigma}F_{\rho \sigma},
 \end{equation}
 %
 %With respect to the electromagnetic tensor $F = \frac{1}{2} F_{\mu\nu}\dd{x^\mu} \wedge \dd{x^\nu}$and its dual $*F$ 
 %
-and allows us to write Maxwell's equations in this way: 
+which allows us to write Maxwell's equations in this way: 
 %
 \begin{equation} \label{eq:form-maxwell}
     \dd{F} = 0 \qquad  \qquad \dd{*F} = * j\,,
@@ -68,7 +68,7 @@ The electromagnetic duality transformation corresponds to the formal substitutio
 If we consider the configuration where an electrically charged point-like particle lies in the origin, the electric and magnetic field are:
 \begin{subequations}\label{ElectricMonopole}
 \begin{gather}
-E^i=\frac{e}{2r^2}x^i,\\
+E^i=\frac{e}{4\pi r^3}x^i,\\
 B^i =0,
 \end{gather}
 \end{subequations}
@@ -77,36 +77,36 @@ and satisfy:
 %
 \begin{subequations}
 \begin{align}
-\partial_i E^i=2\pi e \delta^3(\vec r),\\
-e=\frac{1}{2\pi}\int_{S^2} E_i d S^i.
+\partial_i E^i= e \delta^3(\vec r),\\
+e=\int_{S^2} E_i d S^i.
 \end{align}
 \end{subequations}
 %
-Now, we might apply a duality transformation to this configuration and obtain a magnetic point-like monopole, which has charge $m$ and is placed in the origin. Now the fields are:
+Now, we might apply a duality transformation to this configuration and obtain a magnetic point-like monopole, which has charge $m$ and is placed in the origin. The fields become:
 %
 \begin{subequations}
 \begin{gather}
 \label{MagneticMonopole}
-B^i=\frac{m}{2r^2}x^i\\
+B^i=\frac{m}{4\pi r^3}x^i\\
 E^i=0,
 \end{gather}
 \end{subequations}
 %
 and correspond to this electromagnetic tensor:
 \begin{equation}\label{eq:Fij}
-F_{ij}=\frac{m}{2r^3}\varepsilon_{ijk}x^k \qquad F_{i0}=0.
+F_{ij}=\frac{m}{4 \pi r^3}\varepsilon_{ijk}x^k \qquad F_{i0}=0.
 \end{equation}
 %
 We now compute the 2-form associated to the tensor in equation \ref{eq:Fij}:
 %
 \begin{equation}
-F=F_{ij}\dd{x^i}\dd{x^j}=\frac{m}{4r^3}\varepsilon_{ijk}x_k\dd{x^i}\dd{x^j}=\frac{m}{2}\sin\theta \dd{\theta}\wedge \dd{\phi}\,,
+F=F_{ij}\dd{x^i}\dd{x^j}=\frac{m}{4\pi r^3}\varepsilon_{ijk}x_k\dd{x^i}\dd{x^j}=\frac{m}{4\pi}\sin\theta \dd{\theta}\wedge \dd{\phi}\,,
 \end{equation}
 %
 and deduce from it the value of the magnetic charge in the origin:
 %
 \begin{equation} \label{eq:MagnCharge}
-\int_{\mathbb R^3} \dd{F} = \int_{S^2_\infty} F=\frac{m}{2}\int_{S^2_\infty}\sin\theta \dd{\theta}\wedge \dd{\phi}=2\pi m .
+\int_{\mathbb R^3} \dd{F} = \int_{S^2_\infty} F=\frac{m}{4\pi}\int_{S^2_\infty}\sin\theta \dd{\theta}\wedge \dd{\phi}=m .
 \end{equation}
 %
 In the first passage of equation \ref{eq:MagnCharge}, we applied Stokes' theorem to an arbitrarily large sphere, because the integrand function has no radial dependence.
@@ -115,13 +115,13 @@ In the first passage of equation \ref{eq:MagnCharge}, we applied Stokes' theorem
 We cannot find for the magnetic monopole fields, represented by the 2-form $F$, a global vector potential $A$ such that $F=\dd{A}$.  If it existed, we would have the following paradox:
 
 \begin{equation} \label{eq:different-potentials}
- m= \int_{\mathbb R^3} \frac{\dd{F}}{2\pi} 
-= \int_{S^2_\infty} \frac{F}{2 \pi}
- =\int_{S^2_\infty}\frac{\dd{A}}{2\pi}=\int_{\partial S^2_\infty}\frac{A}{2\pi}=0 \neq m\,,
+ m= \int_{\mathbb R^3} \dd{F}
+= \int_{S^2_\infty} F
+ =\int_{S^2_\infty}\dd{A}=\int_{\partial S^2_\infty}A=0 \neq m\,,
 \end{equation}
 %
 %which implies that we must consider at least two charts for our manifold $\mathbb{R}^3\setminus \qty{0}$, and define a potential for each of them.
-Even though the form \(F\) is closed ($\dd{F}=0$), it is not exact. This happens beacause the manifold we are considering, is not contractible and therefore Poincaré 's lemma cannot be applied.
+Even though the form \(F\) is closed ($\dd{F}=0$), it is not exact. This happens beacause the manifold we are considering --- the punctured space $\mathbb R ^3 \setminus \qty{0}$ --- is not contractible and therefore Poincaré's lemma cannot be applied.
 
 %The second omothopy group for euclidean space is:
 
@@ -132,12 +132,12 @@ Even though the form \(F\) is closed ($\dd{F}=0$), it is not exact. This happens
 We can, however, find potentials which are defined \emph{locally}: a possible choice of $A$ is, in cylindric coordinates,
 
 \begin{equation}
-A=\frac{m}{2}\left(c-\cos\theta\right)\dd{\phi},
+A=\frac{m}{4\pi}\left(c-\cos\theta\right)\dd{\phi},
 \end{equation}
 where $c = \pm 1$. Differentiating this equation we have
 %
 \begin{equation}
-\dd{A}=\frac{m}{2}\left(c-\cos\theta\right)\dd^2\phi-\frac{m}{2}\dd{\cos\theta}\wedge \dd{\phi}=\frac{m}{2}\sin\theta \dd{\theta}\wedge \dd{\phi}\,,
+\dd{A}=\frac{m}{4\pi}\left(c-\cos\theta\right)\dd^2\phi-\frac{m}{4\pi}\dd{\cos\theta}\wedge \dd{\phi}=\frac{m}{4\pi}\sin\theta \dd{\theta}\wedge \dd{\phi}\,,
 \end{equation}
 where the first term vanishes because \(\dd^2 = 0\).
 %
@@ -147,6 +147,7 @@ We will show that for both choices of $c$ the potential is singular somewhere:
 \item for $c=1$ the potential \(A\) is singular along the \(z<0\) axis;
 \item for $c=-1$, instead, \(A\) is singular along the \(z>0\) axis.
 \end{itemize}
+
 %
 The \(z \lessgtr 0\) ray is called a \emph{Dirac string}.
 %
@@ -154,24 +155,31 @@ The \(z \lessgtr 0\) ray is called a \emph{Dirac string}.
 %
 In both cases, we see that removing the string makes the topology trivial: the manifold becomes contractible, and the local potential is defined on the whole of either open set $\mathbb{R}^3\setminus \qty{z \lessgtr 0}$.
 %
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.3]{DiracMon.png}
+\caption{A schematization of Dirac string}
+\label{fig-DirMon}
+\end{figure}
+
 We call the two choices of $A$ respectively $A^+$ and $A^-$.
 We say that $U_+ = \mathbb{R}^3 \setminus \qty{z<0}$ is the chart where we defined $A^+$ and $U_- = \mathbb{R}^3 \setminus \qty{z>0}$ is the one where we defined $A^-$.
 
 Let us now show that the potentials indeed diverge near their Dirac string. We wish to integrate in a similar domain to the one of equation \eqref{eq:different-potentials}, however now we must exclude the Dirac string: the resulting domain is a 2D surface, which we denote by $S_2 - D_\epsilon$; its boundary is a small circle $C_\epsilon$ around the Dirac string.
 %
 \begin{equation}\label{MagCharge}
-2\pi m=\int_{S_2} F=\lim_{\epsilon\to 0}\int_{S_2-D_{\varepsilon}}F=\lim_{\epsilon\to 0}\int_{S_2-D_{\varepsilon}} \dd{A}=\lim_{\epsilon\to 0}\int_{C_{\varepsilon}} A,
+m=\int_{S_2} F=\lim_{\epsilon\to 0}\int_{S_2-D_{\varepsilon}}F=\lim_{\epsilon\to 0}\int_{S_2-D_{\varepsilon}} \dd{A}=\lim_{\epsilon\to 0}\int_{C_{\varepsilon}} A,
 \end{equation}
 which implies the divergence of $A$, since its integral along an arbitrarily small circle is requested to be fixed and finite.
 
 \medskip
 We now want to calculate the transiton function between the two potentials in the region where their domains overlap $U_+ \cap U_-$:
 \begin{equation}
-A^+-A^-=m\dd{\phi}=\dd{(m\phi)} \equiv \dd{\lambda(x)}\,.
+A^+-A^-=\frac{m}{2\pi}\dd{\phi}=\dd{\qty(\frac{m\phi}{2\pi})} \equiv \dd{\lambda(x)}\,.
 \end{equation}
 
 This transformation can be seen as a $U(1)$ gauge transformation:
-let $h$ be the map $h:U_+\cap U_- \to G=U(1)$, such that $x\to \exp(\frac{ie\lambda(x)}{2\pi})$, where $e$ is the electric charge.
+let $h$ be the map $h:U_+\cap U_- \to G=U(1)$, such that $x\to \exp(ie\lambda(x))$, where $e$ is the electric charge.
 The corresponding transformation of the potential is:
 %
 \begin{equation}
@@ -192,50 +200,45 @@ We now want to show that the integer $em$ has a clear geometrical meaning: it is
 To prove this, we can split the integral in \eqref{MagCharge} into two contributions from both the potentials and integrate them over two hemispheres, whose borders can both be made to coincide with the equator $S^1$, but will have opposite orientations, whence the minus sign before $A_-$:
 
 \begin{equation}
-m=\int_{S^2}\frac{F}{2\pi}=\int_{S^2_+}\frac{\dd{A}^+}{2\pi}+\int_{S^2_-}\frac{\dd{A}^-}{2\pi}=\int_{S^1}\frac{A^+-A^-}{2\pi}=\int_{S^1}\frac{\dd{\lambda}}{2\pi}=\frac{\Delta\lambda}{2\pi},
+m=\int_{S^2}F=\int_{S^2_+}\dd{A}^++\int_{S^2_-}\dd{A}^-=\int_{S^1}A^+-A^-=\int_{S^1}\dd{\lambda}=\Delta\lambda,
 \end{equation}
 %
 Multiplying $\Delta \lambda$ by the charge $e$, we can deduce how many radiants the argument of the exponent has elapsed. Therefore, the winding number is: 
 \begin{equation}
-S_1=\frac{e\Delta\lambda}{2\pi}=me \,.
+S_1=\frac{e\Delta\lambda}{2\pi}=\frac{me}{2\pi} \,.
 \end{equation}
 
 
-\begin{figure}[h]
-\centering
-\includegraphics[scale=0.3]{DiracMon.png}
-\caption{A schematization of Dirac string}
-\label{fig-DirMon}
-\end{figure}
-
 \subsection{Zwanziger-Schwinger Quantization for the Dyon}
-We want now to consider the hypothetic case of a particle carrying both electric and magnetic charge, respectivelly $e_1$ and $g_1$, called dyon. If this particle moves into an electromagnetic field it experiments the whole force
+We want now to consider the hypothetical case of a particle carrying both electric and magnetic charge, respectively $e_1$ and $g_1$, called dyon. If this particle moves into an electromagnetic field it experiences the force
 \begin{equation}
 \vec F=e_1\left[\vec E-\vec v\times\vec B\right]-g_1\left[\vec B-\vec v\times\vec E\right].
 \end{equation}
-At the same time we suppose that electric and magnetic fields are origined by another dyon in the origin, with electric charge $e_2$ and magnetic charge $g_2$:
+
+At the same time we suppose that electric and magnetic fields are origined by another dyon in the origin, with electric charge $e_2$ and magnetic charge $g_2$, which generates the fields:
 \begin{align}
-&\vec E=e_2\frac{\vec r}{r^3},\nonumber\\
-&\vec B=g_2\frac{\vec r}{r^3}.
+&\vec E=\frac{e_2}{4\pi}\frac{\vec r}{r^3},\nonumber\\
+&\vec B=\frac{g_2}{4\pi}\frac{\vec r}{r^3}.
 \end{align}
+
 Now, let $\vec L=\vec r\times m\vec v$ (where $m$ denotes the mass) be the orbital angular momentum of the first dyon: in this case we have
 \begin{equation}
 \dv{\vec{L}}{t}
-=(e_1g_2-g_1e_2)
+=\frac{1}{4\pi}(e_1g_2-g_1e_2)
 \dv{}{t}
 \frac{\vec r}{r},
 \end{equation}
-which implies that a dyon in this field does not conserve the regular angular momentum $\vec L$, however is conserves another quantity, that is the whole momentum
+which implies that a dyon in this field does not conserve the regular angular momentum $\vec L$, however it conserves another quantity, that is the whole momentum
 \begin{equation}
-\vec J=\vec r\times m\vec v-(e_1g_2-g_1e_2)\frac{\vec r}{r}.
+\vec J=\vec r\times m\vec v-\frac{1}{4\pi}(e_1g_2-g_1e_2)\frac{\vec r}{r}.
 \end{equation}
-Consider now the projection of $\vec J$ on the versor $\hat r$, which is $J_r=e_1g_2-g_1e_2$: from the quantization of $J_r$, the Zwanziger-Schwinger quantization condition follows:
+Consider now the projection of $\vec J$ on the versor $\hat r$, which is $J_r=(e_1g_2-g_1e_2)/4 \pi$: from the quantization of $J_r$: $J_r \in \mathbb Z /2 $, the Zwanziger-Schwinger quantization condition follows:
 \begin{equation}
-e_1g_2-g_1e_2\in\mathbb{Z}.
+e_1g_2-g_1e_2\in 2 \pi \mathbb{Z}.
 \end{equation}
-We notice that if we set $g_1=0$, $e_2=0$ and $e_1 = e$, that is, we consider an electrically charged particle with unit charge moving in the field generated by a pure magnetic monopolem, we get Dirac's quantization condition:
+We notice that if we set $g_1=0$, $e_2=0$ and $e_1 = e$, that is, we consider an electrically charged particle with unit charge moving in the field generated by a pure magnetic monopole, we get Dirac's quantization condition:
 \begin{equation}
-e g_2\in\mathbb{Z}.
+e g_2\in 2 \pi \mathbb{Z}.
 \end{equation}
 
 % \subsection{Witten Effect}

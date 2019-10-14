@@ -18,7 +18,7 @@ in a space of dimension \(d\) one can define tensors of any rank \(n\), but if w
 %
 we can see that they only have \(\dbinom{d}{n}\) independent components: they can be nontrivial only if \(n \leq d\).  
 
-The differential form associated with the tensor \(F_{\mu_1 \dots \mu_{n}}\) is defined as:
+The differential form $F$ associated with the tensor \(F_{\mu_1 \dots \mu_{n}}\) is defined as:
 
 \begin{equation}
   F = \frac{1}{n!} F_{\mu_1 \dots \mu_{n}} \dd{x^{\mu_1}} \wedge \dots \wedge \dd{x^{\mu_n}}\,,
@@ -37,7 +37,7 @@ The wedge product is an antisymmetrized tensor product: it maps a \(p\)-form \(A
 
 It is \emph{graded} antisymmetric: \(A \wedge B = (-)^{pq} B \wedge A\).
 
-The number of independent components being given by the binomial coefficient tells us that the spaces of \(n\)-forms and \(d-n\)-forms have the same dimension: it is natural to seek a connection between them. This is realized by \emph{Hodge duality}: an \(n\)-form \(F\) is mapped to the \((d-n)\)-form \(*F\), defined by:
+The number of independent components being given by the binomial coefficient tells us that the spaces of \(n\)-forms and \((d-n)\)-forms have the same dimension: it is natural to seek a connection between them. This is realized by \emph{Hodge duality}: an \(n\)-form \(F\) is mapped to the \((d-n)\)-form \(*F\), defined by:
 \begin{equation}
   *F = 
   \frac{1}{n!(d-n)!} \varepsilon_{\mu_1 \dots \mu_d} F^{\mu_1 \dots \mu_n} \dd{x^{\mu_{n+1}}} \wedge \dots \wedge \dd{x^{\mu_{d}}}\,.
@@ -49,7 +49,7 @@ Then, \(\dd{F} \equiv \partial \wedge F\).
 
 The functions usually considered are sufficiently regular, therefore by Schwarz's theorem \(\dd^2 = 0\).
 
-An \(n\)-form \(F\) can is called \emph{closed} if \(\dd{F}= 0 \) and \emph{exact} if there exists an \((n-1)\)-form \(A\) such that \(F = \dd{A}\).
+An \(n\)-form \(F\) is called \emph{closed} if \(\dd{F}= 0 \) and \emph{exact} if there exists an \((n-1)\)-form \(A\) such that \(F = \dd{A}\).
 By \(\dd^2=0\) we have that exact implies closed, while the inverse is not generally true.
 
 A \emph{contractible} subset of a topological space is one which can be continuously deformed to a point.
@@ -62,9 +62,9 @@ The non-contractibiliy of spaces is caused by topological nontriviality: the quo
 Consider two topological spaces \(X\) and \(Y\): two functions \(f, g \colon X \rightarrow Y\) are said to be \emph{homotopic} if there exists a continuous deformation \(H \colon X \times [0,1] \rightarrow Y\) such that for any \(x \in X\) we have \(H(x, 0) = f(x)\) while \(H(x, 1) = g(x)\).
 
 Now, consider a topological space \(X\).
-We denote the set of all maps \(f\) from the \(n\)-cube \([0,1]^n \rightarrow X\) such that  \(f(t) \equiv x_0 \in X\) if \(t\) is on the boundary of the \(n\)-cube (\(t\in \partial [0,1]^{n}\)) as $\mathcal M(x_0)$.
+We denote  as $\mathcal M(x_0)$ the set of all maps \(f\) from the \(n\)-cube \([0,1]^n \rightarrow X\) such that  \(f(t) \equiv x_0 \in X\) if \(t\) is on the boundary of the \(n\)-cube (\(t\in \partial [0,1]^{n}\)).
 
-The composition of two maps \(f\) and \(g\) is defined as:
+The composition of two maps \(f, g \in \mathcal M (x_0)\) is defined as:
 
 \begin{equation}
   (f+g) (\vec{x} ) = \begin{cases}
@@ -73,12 +73,11 @@ The composition of two maps \(f\) and \(g\) is defined as:
   \end{cases}
 \end{equation}
 
-Then, the quotient of $\mathcal M(x_0)$ with respect to the homotopy equivalence relation (denoted by $\sim$) considered with the operation of composition $+$, formally $(\mathcal{M}(x_0)/\sim, +)$,
+Then, the quotient of $\mathcal M(x_0)$ with respect to the homotopy equivalence relation (denoted by $\sim$) considered with the operation of composition $+$, formally $(\mathcal{M}(x_0)/\!\sim, +)$,
 is called the \(n\)-th homotopy group \(\Pi_n (X; x_0)\).
-The dependence on \(x_0\) is actually trivial: it only matters to which connected component of \(X\) the element \(x_0\) belongs. If the space is arcwise connected, there is no meaningful dependence on \(x_0 \) whatsoever.
+The dependence on \(x_0\) is actually trivial: it only matters to which connected component of \(X\) it belongs. If the space is arcwise connected, there is no meaningful dependence on \(x_0 \) whatsoever.
 
-
-The first homotopy classifies loops: for example, for a torus \(\Pi_{1} (\mathbb{T}^2) = \mathbb{Z}^2\) since we have two independent non-homotopic  ways of going around it, and we can go around the torus any amount of times along either.
+The first homotopy group classifies loops: for example, for a torus $\mathbb T^2 $ we have \(\Pi_{1} (\mathbb{T}^2) = (\mathbb{Z}^2, +)\) since we have two independent non-homotopic  ways of going around it, and we can go around the torus any amount of times along either.
 
 Some notable cases for higher homotopy groups are: \(\Pi_n (S^m) = 0 \) for \(n<m\) and \(\Pi_n (S^n) = (\mathbb Z, +)\).
 
