@@ -21,6 +21,7 @@ is an antisymmetric tensor and can be written as a 2-form (see appendix \ref{sec
 %
 \begin{equation}
 F = \frac{1}{2} F_{\mu\nu}\dd{x^\mu} \wedge \dd{x^\nu}
+\,.
 \end{equation}
 %
 It obeys Maxwell's equations:
@@ -28,7 +29,7 @@ It obeys Maxwell's equations:
 \begin{subequations} \label{Maxwell}
 \begin{align}
 \partial_{\mu}F^{\mu \nu}&= j^\nu \label{maxwell-nonhom} \\
-\partial_{[\mu} F_{\nu\rho]} &=0 \label{maxwell-hom} \,,
+\partial_{[\mu} F_{\nu\rho]} &=0 \label{maxwell-hom} \,.
 \end{align}
 \end{subequations}
 We can define a dual electromagnetic tensor (see appendix \ref{sec:differential-forms}) by \emph{Hodge duality}: 
@@ -46,7 +47,7 @@ which allows us to write Maxwell's equations in this way:
 %
 where we introduced the current form $j = j_\mu \dd{x^\mu}$.
 %
-Now, it is clear to see that, if $j=0$, equations \ref{eq:form-maxwell} are invariant with respect to the duality transformation $F \rightarrow *F$, since $*^2 = -\mathbb{1}$ for 2-forms. Such symmetry is broken when $j\neq 0$: however, we can preserve invariance under duality when $j\neq 0$ if we introduce a ``magnetic current'' $j_m$ such that $\dd{F} = *j_m$, and complement the duality transformation as such:
+If $j=0$, equations \eqref{eq:form-maxwell} are invariant with respect to the duality transformation $F \rightarrow *F$, since $*^2 = -\mathbb{1}$ for 2-forms. Such symmetry is broken when $j\neq 0$: however, even in this case, we can preserve invariance under duality if we introduce a ``magnetic current'' $j_m$ such that $\dd{F} = *j_m$, and complement the duality transformation as such:
 \begin{equation}
 \begin{cases}
 j \rightarrow j_m \\
@@ -54,12 +55,12 @@ j_m \rightarrow -j \\
 \end{cases}.
 \end{equation}
 %
-The electromagnetic duality transformation corresponds to the formal substitution of $(\vec E,\vec B)\to(\vec B,-\vec E)$:
+The electromagnetic duality transformation corresponds to the formal substitution of the fields $(\vec E,\vec B)\to(\vec B,-\vec E)$:
 %
 \begin{subequations}
 \begin{align}
-&\tilde{E^i}=\tilde{F^{i0}}=\frac{1}{2}\epsilon^{i0jk}F_{jk}=-\frac{1}{2}\epsilon^{ijk}F^{ik}=B^i\\
-&\tilde{B^i}=-\frac{1}{2}\epsilon^{ijk}\tilde{F^{jk}}=-\frac{1}{2}\epsilon^{ijk}\epsilon^{jkl0}F_{l0}=-\frac{1}{2}\epsilon^{ijk}\epsilon^{ljk}E^l=-E^i
+&\tilde{E^i}=\tilde{F}^{i0}=\frac{1}{2}\epsilon^{i0jk}F_{jk}=-\frac{1}{2}\epsilon^{ijk}F^{ik}=B^i\\
+&\tilde{B^i}=-\frac{1}{2}\epsilon^{ijk}\tilde{F}^{jk}=-\frac{1}{2}\epsilon^{ijk}\epsilon^{jkl0}F_{l0}=-\frac{1}{2}\epsilon^{ijk}\epsilon^{ljk}E^l=-E^i
 \end{align}
 \end{subequations}
 
@@ -82,42 +83,42 @@ e=\int_{S^2} E_i d S^i.
 \end{align}
 \end{subequations}
 %
-Now, we might apply a duality transformation to this configuration and obtain a magnetic point-like monopole, which has charge $m$ and is placed in the origin. The fields become:
+Now, we might apply a duality transformation to this configuration and obtain a magnetic point-like monopole, which has charge $g$ and is placed in the origin. The fields become:
 %
 \begin{subequations}
 \begin{gather}
 \label{MagneticMonopole}
-B^i=\frac{m}{4\pi r^3}x^i\\
+B^i=\frac{g}{4\pi r^3}x^i\\
 E^i=0,
 \end{gather}
 \end{subequations}
 %
 and correspond to this electromagnetic tensor:
 \begin{equation}\label{eq:Fij}
-F_{ij}=\frac{m}{4 \pi r^3}\varepsilon_{ijk}x^k \qquad F_{i0}=0.
+F_{ij}=\frac{g}{4 \pi r^3}\varepsilon_{ijk}x^k \qquad F_{i0}=0.
 \end{equation}
 %
-We now compute the 2-form associated to the tensor in equation \ref{eq:Fij}:
+We now compute the 2-form associated to the tensor in equation \eqref{eq:Fij}:
 %
 \begin{equation}
-F=F_{ij}\dd{x^i}\dd{x^j}=\frac{m}{4\pi r^3}\varepsilon_{ijk}x_k\dd{x^i}\dd{x^j}=\frac{m}{4\pi}\sin\theta \dd{\theta}\wedge \dd{\phi}\,,
+F=F_{ij}\dd{x^i}\dd{x^j}=\frac{g}{4\pi r^3}\varepsilon_{ijk}x_k\dd{x^i}\dd{x^j}=\frac{g}{4\pi}\sin\theta \dd{\theta}\wedge \dd{\phi}\,,
 \end{equation}
 %
 and deduce from it the value of the magnetic charge in the origin:
 %
 \begin{equation} \label{eq:MagnCharge}
-\int_{\mathbb R^3} \dd{F} = \int_{S^2_\infty} F=\frac{m}{4\pi}\int_{S^2_\infty}\sin\theta \dd{\theta}\wedge \dd{\phi}=m .
+\int_{\mathbb R^3} \dd{F} = \int_{S^2_\infty} F=\frac{g}{4\pi}\int_{S^2_\infty}\sin\theta \dd{\theta}\wedge \dd{\phi}=g .
 \end{equation}
 %
-In the first passage of equation \ref{eq:MagnCharge}, we applied Stokes' theorem to an arbitrarily large sphere, because the integrand function has no radial dependence.
+In the first equivalence of equation \eqref{eq:MagnCharge}, we applied Stokes' theorem to an arbitrarily large sphere, since the integrand function has no radial dependence.
 
 \subsection{Dirac Quantization for the Monopole}
 We cannot find for the magnetic monopole fields, represented by the 2-form $F$, a global vector potential $A$ such that $F=\dd{A}$.  If it existed, we would have the following paradox:
 
 \begin{equation} \label{eq:different-potentials}
- m= \int_{\mathbb R^3} \dd{F}
+ g= \int_{\mathbb R^3} \dd{F}
 = \int_{S^2_\infty} F
- =\int_{S^2_\infty}\dd{A}=\int_{\partial S^2_\infty}A=0 \neq m\,,
+ =\int_{S^2_\infty}\dd{A}=\int_{\partial S^2_\infty}A=0 \neq g\,,
 \end{equation}
 %
 %which implies that we must consider at least two charts for our manifold $\mathbb{R}^3\setminus \qty{0}$, and define a potential for each of them.
@@ -129,15 +130,15 @@ Even though the form \(F\) is closed ($\dd{F}=0$), it is not exact. This happens
 %\Pi_2\left(\mathcal{R}-\bigl\{0\bigr\}\right)=\mathcal{Z}.
 %\end{equation}
 
-We can, however, find potentials which are defined \emph{locally}: a possible choice of $A$ is, in cylindric coordinates,
+We can, however, find potentials which are defined \emph{locally}: a possible choice of $A$ is, in cylindric coordinates:
 
 \begin{equation}
-A=\frac{m}{4\pi}\left(c-\cos\theta\right)\dd{\phi},
+A=\frac{g}{4\pi}\left(c-\cos\theta\right)\dd{\phi},
 \end{equation}
 where $c = \pm 1$. Differentiating this equation we have
 %
 \begin{equation}
-\dd{A}=\frac{m}{4\pi}\left(c-\cos\theta\right)\dd^2\phi-\frac{m}{4\pi}\dd{\cos\theta}\wedge \dd{\phi}=\frac{m}{4\pi}\sin\theta \dd{\theta}\wedge \dd{\phi}\,,
+\dd{A}=\frac{g}{4\pi}\left(c-\cos\theta\right)\dd^2\phi-\frac{g}{4\pi}\dd{\cos\theta}\wedge \dd{\phi}=\frac{g}{4\pi}\sin\theta \dd{\theta}\wedge \dd{\phi}\,,
 \end{equation}
 where the first term vanishes because \(\dd^2 = 0\).
 %
@@ -158,24 +159,24 @@ In both cases, we see that removing the string makes the topology trivial: the m
 \begin{figure}[h]
 \centering
 \includegraphics[scale=0.3]{DiracMon.png}
-\caption{A schematization of Dirac string}
+\caption{A schematization of Dirac string.}
 \label{fig-DirMon}
 \end{figure}
 
 We call the two choices of $A$ respectively $A^+$ and $A^-$.
-We say that $U_+ = \mathbb{R}^3 \setminus \qty{z<0}$ is the chart where we defined $A^+$ and $U_- = \mathbb{R}^3 \setminus \qty{z>0}$ is the one where we defined $A^-$.
+We say that $U_+ = \mathbb{R}^3 \setminus \qty{z<0}$ is the chart where we define $A^+$ and $U_- = \mathbb{R}^3 \setminus \qty{z>0}$ is the one where we define $A^-$.
 
-Let us now show that the potentials indeed diverge near their Dirac string. We wish to integrate in a similar domain to the one of equation \eqref{eq:different-potentials}, however now we must exclude the Dirac string: the resulting domain is a 2D surface, which we denote by $S_2 - D_\epsilon$; its boundary is a small circle $C_\epsilon$ around the Dirac string.
+Let us now show that the potentials indeed diverge near their Dirac string. We wish to integrate in a similar domain to the one of equation \eqref{eq:different-potentials}, however now we must exclude the Dirac string: the resulting domain is a 2D surface, which we denote by $S_2 \setminus D_\epsilon$; its boundary is a small circle $C_\epsilon$ around the Dirac string. As in \eqref{eq:MagnCharge} we have:
 %
 \begin{equation}\label{MagCharge}
-m=\int_{S_2} F=\lim_{\epsilon\to 0}\int_{S_2-D_{\varepsilon}}F=\lim_{\epsilon\to 0}\int_{S_2-D_{\varepsilon}} \dd{A}=\lim_{\epsilon\to 0}\int_{C_{\varepsilon}} A,
+g=\int_{S_2} F=\lim_{\epsilon\to 0}\int_{S_2\setminus D_{\varepsilon}}F=\lim_{\epsilon\to 0}\int_{S_2\setminus D_{\varepsilon}} \dd{A}=\lim_{\epsilon\to 0}\int_{C_{\varepsilon}} A,
 \end{equation}
 which implies the divergence of $A$, since its integral along an arbitrarily small circle is requested to be fixed and finite.
 
 \medskip
-We now want to calculate the transiton function between the two potentials in the region where their domains overlap $U_+ \cap U_-$:
+We now want to calculate the transiton function between the two potentials in the region $U_+ \cap U_-$ where their domains overlap:
 \begin{equation}
-A^+-A^-=\frac{m}{2\pi}\dd{\phi}=\dd{\qty(\frac{m\phi}{2\pi})} \equiv \dd{\lambda(x)}\,.
+A^+-A^-=\frac{g}{2\pi}\dd{\phi}=\dd{\qty(\frac{g\phi}{2\pi})} \equiv \dd{\lambda(x)}\,.
 \end{equation}
 
 This transformation can be seen as a $U(1)$ gauge transformation:
@@ -186,31 +187,31 @@ The corresponding transformation of the potential is:
 A^+=A^-+\dd{\lambda}=h^{-1}A^-h-\frac{i}{e}h \dd{h}\,.
 \end{equation}
 
-In order to have  the function $h$ well defined, we must have $h(m\phi) = h(m(\phi+ 2\pi))$.
+In order to have  the function $h$ well defined, we must have $h(g\phi) = h(g(\phi+ 2\pi))$.
 This condition is satisfied if we assume that: 
 \begin{equation}
-me \in 2\pi\mathbb{Z}.
+ge \in 2\pi\mathbb{Z}.
 \label{eq:Dirac}
 \end{equation}
 Expression  \eqref{eq:Dirac} is the so-called \textit{Dirac Quantization Condition} and guarantees that: 
 \begin{equation}
-h(m(\phi + 2\pi)) =  \exp(2 \pi me)  h(m\phi) = h( m \phi) \,.
+h(g(\phi + 2\pi)) =  \exp(2 \pi ge)  h(g\phi) = h( g \phi) \,.
 \end{equation}
-We now want to show that the integer $em$ has a clear geometrical meaning: it is the winding number of the map $h$, i.e. the number of times $h$ wraps around the circle $S^1$ as $x$ goes around the center once.
+We now want to show that the integer $eg$ has a clear geometrical meaning: it is the winding number of the map $h$, i.e. the number of times $h$ wraps around the circle $S^1$ as $x$ goes around the center once.
 To prove this, we can split the integral in \eqref{MagCharge} into two contributions from both the potentials and integrate them over two hemispheres, whose borders can both be made to coincide with the equator $S^1$, but will have opposite orientations, whence the minus sign before $A_-$:
 
 \begin{equation}
-m=\int_{S^2}F=\int_{S^2_+}\dd{A}^++\int_{S^2_-}\dd{A}^-=\int_{S^1}A^+-A^-=\int_{S^1}\dd{\lambda}=\Delta\lambda,
+g=\int_{S^2}F=\int_{S^2_+}\dd{A}^++\int_{S^2_-}\dd{A}^-=\int_{S^1}\qty(A^+-A^-)=\int_{S^1}\dd{\lambda}=\Delta\lambda,
 \end{equation}
 %
-Multiplying $\Delta \lambda$ by the charge $e$, we can deduce how many radiants the argument of the exponent has elapsed. Therefore, the winding number is: 
+Multiplying $\Delta \lambda$ by the charge $e$, we can deduce how many radiants the argument of the exponent has elapsed. Therefore, the winding number $S_1$ is: 
 \begin{equation}
-S_1=\frac{e\Delta\lambda}{2\pi}=\frac{me}{2\pi} \,.
+S_1=\frac{e\Delta\lambda}{2\pi}=\frac{ge}{2\pi} \,.
 \end{equation}
 
 
 \subsection{Zwanziger-Schwinger Quantization for the Dyon}
-We want now to consider the hypothetical case of a particle carrying both electric and magnetic charge, respectively $e_1$ and $g_1$, called dyon. If this particle moves into an electromagnetic field it experiences the force
+We want now to consider the hypothetical case of a particle carrying both electric and magnetic charge, respectively $e_1$ and $g_1$, which is called a dyon. If this particle moves into an electromagnetic field it experiences the force
 \begin{equation}
 \vec F=e_1\left[\vec E-\vec v\times\vec B\right]-g_1\left[\vec B-\vec v\times\vec E\right].
 \end{equation}
@@ -228,7 +229,7 @@ Now, let $\vec L=\vec r\times m\vec v$ (where $m$ denotes the mass) be the orbit
 \dv{}{t}
 \frac{\vec r}{r},
 \end{equation}
-which implies that a dyon in this field does not conserve the regular angular momentum $\vec L$, however it conserves another quantity, that is the whole momentum
+which implies that a dyon in this field does not conserve the regular angular momentum $\vec L$, however it conserves another quantity, which we denote by $\vec{J}$:
 \begin{equation}
 \vec J=\vec r\times m\vec v-\frac{1}{4\pi}(e_1g_2-g_1e_2)\frac{\vec r}{r}.
 \end{equation}
